@@ -1,0 +1,154 @@
+{{ $title := .Get "title" | default "Investimento" }}
+{{ $subtitle := .Get "subtitle" }}
+
+<section class="pricing-section py-16 md:py-240">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold font-heading mb-4">{{ $title }}</h2>
+            {{ with $subtitle }}
+            <p class="text-lg text-gray-600">{{ . }}</p>
+            {{ end }}
+        </div>
+
+        <div class="flex justify-center">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl">
+                {{/* Package 1 */}}
+                {{ if .Get "package1-name" }}
+                <div class="pricing-card bg-white rounded-lg shadow-lg overflow-hidden {{ if .Get "package1-featured" }}ring-2 ring-primary-500{{ end }}">
+                    <div class="p-6 {{ if .Get "package1-featured" }}bg-primary-50{{ else }}bg-gray-50{{ end }}">
+                        {{ if .Get "package1-featured" }}
+                        <div class="inline-block px-4 py-1 rounded-full text-sm font-semibold text-primary-700 bg-primary-100 mb-4">
+                            Mais Popular
+                        </div>
+                        {{ end }}
+
+                        <h3 class="text-2xl font-bold mb-2">{{ .Get "package1-name" }}</h3>
+                        <div class="flex items-baseline mb-2">
+                            <span class="text-4xl font-bold">{{ .Get "package1-price" }}</span>
+                            {{ with .Get "package1-duration" }}
+                            <span class="ml-2 text-gray-600">/ {{ . }}</span>
+                            {{ end }}
+                        </div>
+                    </div>
+
+                    <div class="p-6">
+                        <ul class="space-y-4">
+                            {{ range $i := seq 5 }}
+                            {{ with $.Get (printf "package1-feature%d" $i) }}
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-green-500 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span class="ml-3">{{ . }}</span>
+                            </li>
+                            {{ end }}
+                            {{ end }}
+                        </ul>
+
+                        <div class="mt-6">
+                            <a 
+                                href="{{ .Get "package1-button-link" | default "#contacto" }}" 
+                                class="block w-full text-center px-6 py-3 rounded-lg {{ if .Get "package1-featured" }}bg-primary-600 text-white hover:bg-primary-700{{ else }}bg-gray-800 text-white hover:bg-gray-900{{ end }} transition duration-150 ease-in-out"
+                                data-track-click="pricing-cta"
+                            >
+                                {{ .Get "package1-button-text" | default "Agendar Agora" }}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                {{ end }}
+
+                {{/* Package 2 */}}
+                {{ if .Get "package2-name" }}
+                <div class="pricing-card bg-white rounded-lg shadow-lg overflow-hidden {{ if .Get "package2-featured" }}ring-2 ring-primary-500{{ end }}">
+                    <div class="p-6 {{ if .Get "package2-featured" }}bg-primary-50{{ else }}bg-gray-50{{ end }}">
+                        {{ if .Get "package2-featured" }}
+                        <div class="inline-block px-4 py-1 rounded-full text-sm font-semibold text-primary-700 bg-primary-100 mb-4">
+                            Mais Popular
+                        </div>
+                        {{ end }}
+
+                        <h3 class="text-2xl font-bold mb-2">{{ .Get "package2-name" }}</h3>
+                        <div class="flex items-baseline mb-2">
+                            <span class="text-4xl font-bold">{{ .Get "package2-price" }}</span>
+                            {{ with .Get "package2-duration" }}
+                            <span class="ml-2 text-gray-600">/ {{ . }}</span>
+                            {{ end }}
+                        </div>
+                    </div>
+
+                    <div class="p-6">
+                        <ul class="space-y-4">
+                            {{ range $i := seq 5 }}
+                            {{ with $.Get (printf "package2-feature%d" $i) }}
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-green-500 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span class="ml-3">{{ . }}</span>
+                            </li>
+                            {{ end }}
+                            {{ end }}
+                        </ul>
+
+                        <div class="mt-6">
+                            <a 
+                                href="{{ .Get "package2-button-link" | default "#contacto" }}" 
+                                class="block w-full text-center px-6 py-3 rounded-lg {{ if .Get "package2-featured" }}bg-primary-600 text-white hover:bg-primary-700{{ else }}bg-gray-800 text-white hover:bg-gray-900{{ end }} transition duration-150 ease-in-out"
+                                data-track-click="pricing-cta"
+                            >
+                                {{ .Get "package2-button-text" | default "Agendar Agora" }}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                {{ end }}
+                {{/* Package 3 */}}
+                {{ if .Get "package3-name" }}
+                <div class="pricing-card bg-white rounded-lg shadow-lg overflow-hidden {{ if .Get "package3-featured" }}ring-2 ring-primary-500{{ end }}">
+                    <div class="p-6 {{ if .Get "package3-featured" }}bg-primary-50{{ else }}bg-gray-50{{ end }}">
+                        {{ if .Get "package3-featured" }}
+                        <div class="inline-block px-4 py-1 rounded-full text-sm font-semibold text-primary-700 bg-primary-100 mb-4">
+                            Mais Popular
+                        </div>
+                        {{ end }}
+
+                        <h3 class="text-2xl font-bold mb-2">{{ .Get "package3-name" }}</h3>
+                        <div class="flex items-baseline mb-2">
+                            <span class="text-4xl font-bold">{{ .Get "package3-price" }}</span>
+                            {{ with .Get "package3-duration" }}
+                            <span class="ml-2 text-gray-600">/ {{ . }}</span>
+                            {{ end }}
+                        </div>
+                    </div>
+
+                    <div class="p-6">
+                        <ul class="space-y-4">
+                            {{ range $i := seq 5 }}
+                            {{ with $.Get (printf "package3-feature%d" $i) }}
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-green-500 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span class="ml-3">{{ . }}</span>
+                            </li>
+                            {{ end }}
+                            {{ end }}
+                        </ul>
+
+                        <div class="mt-6">
+                            <a 
+                                href="{{ .Get "package3-button-link" | default "#contacto" }}" 
+                                class="block w-full text-center px-6 py-3 rounded-lg {{ if .Get "package3-featured" }}bg-primary-600 text-white hover:bg-primary-700{{ else }}bg-gray-800 text-white hover:bg-gray-900{{ end }} transition duration-150 ease-in-out"
+                                data-track-click="pricing-cta"
+                            >
+                                {{ .Get "package3-button-text" | default "Agendar Agora" }}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,52 @@
+{{- /* layouts/partials/schema.html */ -}}
+{{ if eq .Type "landing" }}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "HealthAndBeautyBusiness",
+    "name": "{{ site.Params.business.name }}",
+    "url": "{{ .Permalink }}",
+    "description": "{{ .Description }}",
+    "telephone": "{{ site.Params.business.phone }}",
+    "email": "{{ site.Params.business.email }}",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "{{ index site.Params.contact.addresses 0 }}",
+        "addressLocality": "{{ site.Params.business.location }}",
+        "addressCountry": "{{ site.Params.business.country }}"
+    },
+    "founder": {
+        "@type": "Person",
+        "name": "{{ site.Params.business.founder }}",
+        "jobTitle": "Massoterapeuta e Osteopata",
+        "description": "{{ site.Params.description }}",
+        "email": "{{ site.Params.business.email }}",
+        "telephone": "{{ site.Params.business.phone }}",
+        "url": "{{ .Site.BaseURL }}/sobre/"
+    },
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "{{ site.Params.contact.lat }}",
+        "longitude": "{{ site.Params.contact.lng }}"
+    },
+    {{ if .Params.schema }}
+    "makesOffer": {
+        "@type": "Service",
+        "name": "{{ .Params.schema.service }}",
+        "description": "{{ $.Description }}",
+        "offers": {
+            "@type": "Offer",
+            "price": "{{ .Params.schema.price | default "0.00" }}",
+            "priceCurrency": "EUR",
+            "duration": "PT{{ .Params.schema.duration }}M"
+        }
+    },
+    {{ end }}
+    "sameAs": [
+        "{{ site.Params.social.facebook }}",
+        "{{ site.Params.social.instagram }}",
+        "{{ site.Params.social.linkedin }}"
+    ]
+}
+</script>
+{{ end }}

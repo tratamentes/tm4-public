@@ -1,0 +1,28 @@
+name = 'TrataMentes Landing'
+license = 'MIT'
+licenselink = 'https://github.com/tratamentes/themename/blob/master/LICENSE'
+description = 'A landing page theme for TrataMentes'
+
+# The minimum version of Hugo required to build this theme
+min_version = "0.80.0"
+
+# The home page of the theme, where the source can be found
+homepage = 'https://github.com/owner/repo'
+
+# If you have a running demo of the theme
+demosite = 'https://tratamentes.github.io/repo'
+
+# Taxonomy terms
+tags = ['blog', 'company']
+features = ['some', 'awesome', 'features']
+
+# If the theme has a single author
+[author]
+  name = 'João Goulart'
+  homepage = 'https://tratamentes.pt'
+
+# If porting an existing theme
+[original]
+  name = ""
+  homepage = ""
+  repo = ""

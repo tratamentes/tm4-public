@@ -1,0 +1,62 @@
+[cookieMessage]
+other = "Este sitio utiliza cookies para mejorar la experiencia del usuario y analizar el rendimiento y el tráfico en nuestro sitio. Más información en nuestra"
+
+[privacyPolicy]
+other = "Política de privacidad"
+
+[accept]
+other = "Aceptar"
+
+[decline]
+other = "Rechazar"
+
+[book_appointment]
+other = "Reservar cita"
+
+[contact_info]
+other = "Información de contacto"
+
+[useful_links]
+other = "Enlaces útiles"
+
+[follow_us]
+other = "Síganos"
+
+[newsletter]
+other = "Boletín de noticias"
+
+[enter_email]
+other = "Introduzca su correo electrónico"
+
+[subscribe]
+other = "Suscribirse"
+
+[all_rights_reserved]
+other = "Todos los derechos reservados"
+
+[terms_conditions]
+other = "Términos y condiciones"
+
+[privacy_policy]
+other = "Política de privacidad"
+
+[cookie_policy]
+other = "Política de cookies"
+
+[select_language]
+other = "Seleccionar idioma"
+
+[lastModified]
+other = "Última actualización: {{ .Count }}"
+
+[view_all_treatments]
+other = "Ver todos los tratamientos"
+
+[book_now]
+other = "Reservar ahora"
+
+[toggle_menu]
+other = "Alternar menú"
+
+[read_more]
+other = "Ler mais"

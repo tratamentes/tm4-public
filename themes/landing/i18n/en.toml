@@ -1,0 +1,62 @@
+[cookieMessage]
+other = "This site uses cookies to improve user experience and analyze performance and traffic on our website. Learn more in our"
+
+[privacyPolicy]
+other = "Privacy Policy"
+
+[accept]
+other = "Accept"
+
+[decline]
+other = "Decline"
+
+[book_appointment]
+other = "Book Appointment"
+
+[contact_info]
+other = "Contact Information"
+
+[useful_links]
+other = "Useful Links"
+
+[follow_us]
+other = "Follow Us"
+
+[newsletter]
+other = "Newsletter"
+
+[enter_email]
+other = "Enter your email"
+
+[subscribe]
+other = "Subscribe"
+
+[all_rights_reserved]
+other = "All rights reserved"
+
+[terms_conditions]
+other = "Terms & Conditions"
+
+[privacy_policy]
+other = "Privacy Policy"
+
+[cookie_policy]
+other = "Cookie Policy"
+
+[select_language]
+other = "Select Language"
+
+[lastModified]
+other = "Last updated: {{ .Count }}"
+
+[view_all_treatments]
+other = "View All Treatments"
+
+[book_now]
+other = "Book Now"
+
+[toggle_menu]
+other = "Toggle menu"
+
+[read_more]
+other = "Read more"

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}" class="scroll-smooth">
+<head>
+    {{ partial "head.html" . }}
+</head>
+<body class="landing-page-body">
+    {{/* Skip to main content link */}}
+    <a href="#main" class="sr-only focus:not-sr-only">
+        {{ i18n "skip_to_main" }}
+    </a>
+    {{/* Header */}}
+    {{ partial "header.html" . }}
+    
+    {{/* Conteúdo principal */}}
+    <main id="main">
+        {{ block "main" . }}{{ end }}
+    </main>
+
+{{/* Cookie consent */}}{{ if site.Params.cookieConsent.enable }}{{ partial "cookie-consent.html" . }}{{ end }}
+{{/* Scripts de analytics */}}{{ partial "analytics.html" . }} 
+{{/* Incluir o main.js */}}{{ $mainscript := resources.Get "js/main.js" | minify | fingerprint }} <script src="{{ $mainscript.RelPermalink }}" integrity="{{ $mainscript.Data.Integrity }}" crossorigin="anonymous" defer></script> 
+{{/* Incluir o page-scripts.js apenas para páginas específicas */}} 
+{{ if .IsPage }} {{ $pagescript := resources.Get "js/page-scripts.js" | minify | fingerprint }} <script src="{{ $pagescript.RelPermalink }}" integrity="{{ $pagescript.Data.Integrity }}" crossorigin="anonymous" defer></script> {{ end }}
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+/* CSS Crítico - apenas estilos essenciais para o carregamento inicial */
+:root {
+ --color-primary: #62acce;
+    --color-secondary: #2C5282;
+    --font-heading: 'Montserrat', sans-serif;
+ --font-body: 'Inter', sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-body);
+    line-height: 1.5;
+}
+
+.hero {
+    position: relative;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* Estilos críticos mínimos para evitar FOUC (Flash of Unstyled Content) */
+.hero-background {
+    position: absolute;
+    inset: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}

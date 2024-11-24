@@ -1,0 +1,76 @@
+{{ define "main" }}
+<article class="article">
+    {{/* Header Section */}}
+    <header class="article-header">
+        <div class="container mx-auto px-4 py-8">
+            {{/* Breadcrumb - Opcional */}}
+            {{ with .Parent }}
+            <nav class="text-sm mb-4">
+                <a href="{{ .RelPermalink }}" class="text-gray-600 hover:text-primary-600">
+                    {{ .Title }}
+                </a>
+                <span class="px-2 text-gray-400">/</span>
+            </nav>
+            {{ end }}
+
+            {{/* Title */}}
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">{{ .Title }}</h1>
+
+            {{/* Metadata - se existir */}}
+            {{ if or .Date .Params.author }}
+            <div class="flex items-center gap-4 text-gray-600">
+                {{ with .Date }}
+                <time datetime="{{ .Format "2006-01-02" }}">
+                    {{ .Format "02 January 2006" }}
+                </time>
+                {{ end }}
+                
+                {{ with .Params.author }}
+                <span>{{ . }}</span>
+                {{ end }}
+            </div>
+            {{ end }}
+        </div>
+    </header>
+
+    {{/* Content Section */}}
+    <div class="container mx-auto px-4 py-8">
+        <div class="flex flex-col lg:flex-row gap-8">
+            {{/* Main Content */}}
+            <main class="flex-1">
+                <div class="prose prose-lg max-w-none">
+                    {{ .Content }}
+                </div>
+            </main>
+
+            {{/* Sidebar - Renderiza apenas se houver widgets definidos */}}
+            {{ if .Params.widgets }}
+            <aside class="lg:w-1/4">
+                {{ range .Params.widgets }}
+                    {{ partial (printf "widgets/%s.html" .) $ }}
+                {{ end }}
+            </aside>
+            {{ end }}
+        </div>
+    </div>
+
+    {{/* Footer Section - Navegação entre posts, tags, etc */}}
+    {{ if .Section }}
+    <footer class="container mx-auto px-4 py-8 border-t">
+        <div class="flex justify-between">
+            {{ with .PrevInSection }}
+            <a href="{{ .RelPermalink }}" class="text-primary-600 hover:text-primary-700">
+                ← {{ .Title }}
+            </a>
+            {{ end }}
+
+            {{ with .NextInSection }}
+            <a href="{{ .RelPermalink }}" class="text-primary-600 hover:text-primary-700">
+                {{ .Title }} →
+            </a>
+            {{ end }}
+        </div>
+    </footer>
+    {{ end }}
+</article>
+{{ end }}

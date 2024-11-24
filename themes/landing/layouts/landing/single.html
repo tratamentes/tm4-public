@@ -1,0 +1,41 @@
+{{ define "main" }}
+
+<article class="landing-page">
+    {{- /* Hero Section */ -}}
+    {{ with .Params.hero }}
+    <section class="hero">
+        <h1>{{ .title }}</h1>
+        <p>{{ .subtitle }}</p>
+        {{ with .cta }}
+        <a href="{{ .url }}" class="cta-button">{{ .text }}</a>
+        {{ end }}
+    </section>
+    {{ end }}
+
+    {{- /* Conteúdo Principal */ -}}
+    <div class="landing-content">
+        {{ .Content }}
+    </div>
+
+    {{/* Benefícios/Características */}}
+    {{ with .Params.features }}
+    <section class="features">
+        {{ range . }}
+        <div class="feature">
+            <h3>{{ .title }}</h3>
+            <p>{{ .description }}</p>
+        </div>
+        {{ end }}
+    </section>
+    {{ end }}
+
+    {{/* Formulário de Contacto */}}
+    {{ if .Params.showContactForm }}
+    <section class="contact-form">
+        {{ partial "contact-form.html" . }}
+    </section>
+    {{ end }}
+
+    {{ partial "landing-footer.html" . }}
+</article>
+{{ end }}
