@@ -1,32 +1,47 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>TrataMentes - Manual Therapy &amp; Massage | João Goulart</title>
-    <link>http://localhost:1313/en/</link>
-    <description>Recent content on TrataMentes - Manual Therapy &amp; Massage | João Goulart</description>
-    <generator>Hugo</generator>
-    <language>en</language>
-    <atom:link href="http://localhost:1313/en/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Therapeutic Massage</title>
-      <link>http://localhost:1313/en/treatments/therapeutic-massage/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/en/treatments/therapeutic-massage/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Cookies Policy</title>
-      <link>http://localhost:1313/en/cookies-policy/</link>
-      <pubDate>Sat, 23 Mar 2024 14:00:00 +0100</pubDate>
-      <guid>http://localhost:1313/en/cookies-policy/</guid>
-      <description>&lt;h1 id=&#34;cookies-policy&#34;&gt;Cookies Policy&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;Last updated:&lt;/strong&gt; 23 November 2024&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-are-cookies&#34;&gt;What are cookies?&lt;/h2&gt;&#xA;&lt;p&gt;Cookies are small text files that websites place on your device during browsing. They serve several essential functions, such as memorising your preferences, understanding how you use our website and improving your online experience.&lt;/p&gt;&#xA;&lt;h2 id=&#34;how-we-use-cookies&#34;&gt;How we use cookies&lt;/h2&gt;&#xA;&lt;h3 id=&#34;21-essential-cookies&#34;&gt;2.1 Essential Cookies&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Purpose: Essential for the basic functioning of the website&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Duration&lt;/strong&gt;: Session/Persistent&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Examples&lt;/strong&gt;:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Session cookies to keep you logged in&lt;/li&gt;&#xA;&lt;li&gt;Security cookies to protect against fraud&lt;/li&gt;&#xA;&lt;li&gt;Cookies for basic website functionality&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;22-performance-cookies&#34;&gt;2.2 Performance Cookies&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Purpose To analyse website use and performance&lt;/li&gt;&#xA;&lt;li&gt;Duration: Persistent (up to 2 years)&lt;/li&gt;&#xA;&lt;li&gt;Examples&lt;/li&gt;&#xA;&lt;li&gt;Google Analytics (traffic analysis)&lt;/li&gt;&#xA;&lt;li&gt;Loading speed metrics&lt;/li&gt;&#xA;&lt;li&gt;Navigation patterns&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;23-functionality-cookies&#34;&gt;2.3 Functionality Cookies&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Purpose: To improve your browsing experience&lt;/li&gt;&#xA;&lt;li&gt;Duration: Persistent (up to 1 year)&lt;/li&gt;&#xA;&lt;li&gt;Examples&lt;/li&gt;&#xA;&lt;li&gt;Language preferences&lt;/li&gt;&#xA;&lt;li&gt;Accessibility settings&lt;/li&gt;&#xA;&lt;li&gt;Information from completed forms&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;24-marketing-cookies&#34;&gt;2.4 Marketing Cookies&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Purpose: Targeted marketing and advertising&lt;/li&gt;&#xA;&lt;li&gt;Duration**: Persistent (up to 1 year)&lt;/li&gt;&#xA;&lt;li&gt;Examples&lt;/li&gt;&#xA;&lt;li&gt;Conversion tracking&lt;/li&gt;&#xA;&lt;li&gt;Personalised advertising&lt;/li&gt;&#xA;&lt;li&gt;Social networks&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;3-cookie-management&#34;&gt;3 Cookie management&lt;/h2&gt;&#xA;&lt;h3 id=&#34;31-how-to-control-cookies&#34;&gt;3.1 How to Control Cookies&lt;/h3&gt;&#xA;&lt;p&gt;You can control cookies via:&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>About me</title>
-      <link>http://localhost:1313/en/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/en/about/</guid>
-      <description>&lt;p&gt;Seu conteúdo sobre você aqui&amp;hellip;&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>TrataMentes - Manual Therapy &amp; Massage | João Goulart</title><link>http://localhost:1313/en/</link><description>Recent content on TrataMentes - Manual Therapy &amp; Massage | João Goulart</description><generator>Hugo</generator><language>en</language><atom:link href="http://localhost:1313/en/index.xml" rel="self" type="application/rss+xml"/><item><title>Therapeutic Massage</title><link>http://localhost:1313/en/treatments/therapeutic-massage/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/en/treatments/therapeutic-massage/</guid><description/></item><item><title>Cookies Policy</title><link>http://localhost:1313/en/cookies-policy/</link><pubDate>Sat, 23 Mar 2024 14:00:00 +0100</pubDate><guid>http://localhost:1313/en/cookies-policy/</guid><description>&lt;h1 id="cookies-policy">Cookies Policy&lt;/h1>
+&lt;p>&lt;strong>Last updated:&lt;/strong> 23 November 2024&lt;/p>
+&lt;h2 id="what-are-cookies">What are cookies?&lt;/h2>
+&lt;p>Cookies are small text files that websites place on your device during browsing. They serve several essential functions, such as memorising your preferences, understanding how you use our website and improving your online experience.&lt;/p>
+&lt;h2 id="how-we-use-cookies">How we use cookies&lt;/h2>
+&lt;h3 id="21-essential-cookies">2.1 Essential Cookies&lt;/h3>
+&lt;ul>
+&lt;li>Purpose: Essential for the basic functioning of the website&lt;/li>
+&lt;li>&lt;strong>Duration&lt;/strong>: Session/Persistent&lt;/li>
+&lt;li>&lt;strong>Examples&lt;/strong>:
+&lt;ul>
+&lt;li>Session cookies to keep you logged in&lt;/li>
+&lt;li>Security cookies to protect against fraud&lt;/li>
+&lt;li>Cookies for basic website functionality&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="22-performance-cookies">2.2 Performance Cookies&lt;/h3>
+&lt;ul>
+&lt;li>Purpose To analyse website use and performance&lt;/li>
+&lt;li>Duration: Persistent (up to 2 years)&lt;/li>
+&lt;li>Examples&lt;/li>
+&lt;li>Google Analytics (traffic analysis)&lt;/li>
+&lt;li>Loading speed metrics&lt;/li>
+&lt;li>Navigation patterns&lt;/li>
+&lt;/ul>
+&lt;h3 id="23-functionality-cookies">2.3 Functionality Cookies&lt;/h3>
+&lt;ul>
+&lt;li>Purpose: To improve your browsing experience&lt;/li>
+&lt;li>Duration: Persistent (up to 1 year)&lt;/li>
+&lt;li>Examples&lt;/li>
+&lt;li>Language preferences&lt;/li>
+&lt;li>Accessibility settings&lt;/li>
+&lt;li>Information from completed forms&lt;/li>
+&lt;/ul>
+&lt;h3 id="24-marketing-cookies">2.4 Marketing Cookies&lt;/h3>
+&lt;ul>
+&lt;li>Purpose: Targeted marketing and advertising&lt;/li>
+&lt;li>Duration**: Persistent (up to 1 year)&lt;/li>
+&lt;li>Examples&lt;/li>
+&lt;li>Conversion tracking&lt;/li>
+&lt;li>Personalised advertising&lt;/li>
+&lt;li>Social networks&lt;/li>
+&lt;/ul>
+&lt;h2 id="3-cookie-management">3 Cookie management&lt;/h2>
+&lt;h3 id="31-how-to-control-cookies">3.1 How to Control Cookies&lt;/h3>
+&lt;p>You can control cookies via:&lt;/p></description></item><item><title>About me</title><link>http://localhost:1313/en/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/en/about/</guid><description>&lt;p>Seu conteúdo sobre você aqui&amp;hellip;&lt;/p></description></item></channel></rss>
