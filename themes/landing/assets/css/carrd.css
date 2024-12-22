@@ -79,11 +79,11 @@ time,
 mark,
 audio,
 video {
+    border: 0;
+    font: inherit;
+    font-size: 100%;
     margin: 0;
     padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
     vertical-align: baseline;
 }
 
@@ -102,7 +102,14 @@ section {
 }
 
 body {
-    line-height: 1;
+    -webkit-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    background-color: #F7F6F2;
+    line-height: 1.0;
+    min-height: var(--viewport-height);
+    min-width: 320px;
+    overflow-x: hidden;
+    word-wrap: break-word;
 }
 
 ol,
@@ -128,18 +135,14 @@ table {
     border-spacing: 0;
 }
 
-body {
-    -webkit-text-size-adjust: none
-}
-
 mark {
     background-color: transparent;
-    color: inherit
+    color: inherit;
 }
 
 input::-moz-focus-inner {
     border: 0;
-    padding: 0
+    padding: 0;
 }
 
 input[type="text"],
@@ -149,31 +152,19 @@ textarea {
     -moz-appearance: none;
     -webkit-appearance: none;
     -ms-appearance: none;
-    appearance: none
+    appearance: none;
 }
 
 @media (prefers-reduced-motion) {
-
-    *,
-    *:before,
-    *:after {
+    *, *::before, *::after {
         transform: none !important;
     }
 }
 
 *,
-*:before,
-*:after {
+*::before,
+*::after {
     box-sizing: border-box;
-}
-
-body {
-    line-height: 1.0;
-    min-height: var(--viewport-height);
-    min-width: 320px;
-    overflow-x: hidden;
-    word-wrap: break-word;
-    background-color: #F7F6F2;
 }
 
 :root {
