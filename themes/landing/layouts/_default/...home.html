@@ -1,0 +1,151 @@
+{{/* layouts/_default/home.html */}}
+{{ define "main" }}
+
+<div class="min-h-screen bg-neutral-50">
+    <!-- Hero Section -->
+    <section class="container mx-auto px-6 py-12 text-center">
+      <h1 class="font-[Fraunces] text-5xl font-light text-neutral-700 mb-6">
+        <span class="text-primary-300 italic">Alívio</span> para as suas dores e tensões
+      </h1>
+      
+      <p class="mb-8 text-neutral-700 font-sans">
+        As nossas massagens terapêuticas e relaxantes proporcionam uma sensação
+        de bem-estar e equilíbrio. Se procura aliviar as suas dores e tensões,
+        por favor, entre em contato connosco.
+      </p>
+  
+      <a href="#contacto" 
+         class="inline-flex items-center bg-primary-300 text-white px-7 py-3.5 rounded-md uppercase tracking-wider text-sm hover:scale-95 transition-transform font-sans">
+        Envie-nos uma mensagem
+        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </a>
+    </section>
+
+  <!-- About Section -->
+  <section class="bg-white py-16">
+    <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div class="aspect-video bg-primary-900"></div>
+      
+      <div>
+        <h2 class="text-4xl font-light text-neutral-700 mb-6">
+          Cumprimentos, sou João Paulo Goulart
+        </h2>
+        
+        <p class="mb-8 text-neutral-700">
+          Ofereço serviços de massagem profissionais e personalizados, tanto no
+          nosso espaço como no conforto do seu lar, com a possibilidade de serviço
+          ao domicílio. O nosso ambiente está devidamente equipado para melhorar o
+          seu bem-estar.
+        </p>
+
+        <a href="#contacto" 
+           class="inline-flex items-center bg-primary-300 text-white px-7 py-3.5 rounded-md uppercase tracking-wider text-sm hover:scale-95 transition-transform">
+          Envie-nos uma mensagem
+          <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="py-16">
+    <div class="container mx-auto px-6 text-center mb-16">
+      <h2 class="text-5xl font-light text-neutral-700 mb-6">
+        Traz <span class="text-primary-300 italic">alívio</span> às suas dores e tensões
+      </h2>
+      
+      <p class="text-neutral-700">
+        O seu bem-estar é a nossa prioridade. Descontraia-se e deixe-nos cuidar
+        de si. Merece este momento de tranquilidade e alívio.
+      </p>
+    </div>
+
+    <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Massagem Sueca -->
+      <div class="bg-white p-8 rounded shadow-lg">
+        <h3 class="text-2xl font-light text-neutral-700 mb-4">Massagem Sueca</h3>
+        <p class="mb-6 text-neutral-700">
+          Massagem ao corpo inteiro usando movimentos suaves e fluidos. Ajudam a
+          melhorar a circulação e proporcionar o bem-estar.
+        </p>
+        <a href="#agendar" 
+           class="inline-flex items-center text-primary-600 hover:bg-white px-5 py-2.5 rounded text-sm uppercase tracking-wider">
+          Agende agora
+          <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+
+      <!-- Massagem Terapêutica -->
+      <div class="bg-white p-8 rounded shadow-lg">
+        <h3 class="text-2xl font-light text-neutral-700 mb-4">Massagem Terapêutica</h3>
+        <p class="mb-6 text-neutral-700">
+          A terapia certa para aliviar dores constantes. Utilizamos técnicas
+          comprovadas para visar as suas áreas problemáticas.
+        </p>
+        <a href="#agendar" 
+           class="inline-flex items-center text-primary-600 hover:bg-white px-5 py-2.5 rounded text-sm uppercase tracking-wider">
+          Agende agora
+          <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+
+      <!-- Serviço Ao Domicílio -->
+      <div class="bg-white p-8 rounded shadow-lg">
+        <h3 class="text-2xl font-light text-neutral-700 mb-4">Serviço Ao Domicílio</h3>
+        <p class="mb-6 text-neutral-700">
+          Caso lhe seja inconveniente deslocar-se, ou se preferir o conforto do
+          seu próprio espaço, nós podemos deslocar-nos até si, seja em sua casa,
+          no escritório ou em qualquer outro local.
+        </p>
+        <a href="#agendar" 
+           class="inline-flex items-center text-primary-600 hover:bg-white px-5 py-2.5 rounded text-sm uppercase tracking-wider">
+          Agende agora
+          <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contacto" class="bg-white py-16">
+    <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div class="space-y-6">
+        <h2 class="text-4xl font-light text-neutral-700">
+          Sente dores e tensões no corpo?
+        </h2>
+        <p class="text-neutral-700">
+          Ligue e explique melhor o que sente 👉 
+          <a href="tel:00351937543312" class="text-primary-300 font-bold">+351 937 543 312</a>
+          <br/>
+          Ou deixe abaixo os seus detalhes.
+          <br/>
+          <span class="text-primary-300 italic">- João Paulo Goulart -</span>
+        </p>
+      </div>
+
+      <!-- Form would go here -->
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="py-16">
+    <h2 class="text-5xl font-light text-neutral-700 text-center mb-12">
+      Clientes <span class="text-primary-300 italic">satisfeitos</span> todos os dias
+    </h2>
+    <div id="testimonials-widget" class="container mx-auto px-6">
+      <!-- Testimonials widget content -->
+    </div>
+  </section>
+</div>
+
+{{ end }}

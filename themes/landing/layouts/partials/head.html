@@ -6,6 +6,8 @@
     {{/* Preconnect para recursos externos */}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
     {{ if site.Params.analytics.googleAnalytics }}<link rel="preconnect" href="https://www.google-analytics.com" crossorigin>{{ end }}
     {{/* Título e Meta tags SEO */}}<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ with .Title }}{{ . }} | {{ end }}{{ site.Title }}{{ end }}</title>
     <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with site.Params.description }}{{ . }}{{ end }}{{ end }}">
@@ -32,7 +34,7 @@
 
 
     {{/* Tailwind CSS */}}
-    {{ with resources.Get "css/styles.css" }}{{ $css := . | css.PostCSS }}<link rel="stylesheet" href="{{ $css.RelPermalink }}">{{ end }}
+    {{ with resources.Get "css/main.css" }}{{ $css := . | css.PostCSS }}<link rel="stylesheet" href="{{ $css.RelPermalink }}">{{ end }}
     {{- /* CSS customizado */ -}}
     {{ with resources.Get "css/style.css" }}{{ $style := . }}{{ if hugo.IsProduction }}{{ $style = $style | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous">

@@ -1,31 +1,36 @@
 <!-- layouts/shortcodes/about-me.html -->
 <div class="flex flex-col md:flex-row items-center gap-8">
-    <div class="md:w-1/3">
-        {{ with .Site.Params.about.image }}
-        <img src="{{ . }}" alt="{{ $.Site.Params.about.name }}" 
-             class="rounded-full shadow-lg w-64 h-64 object-cover mx-auto">
+  <div class="md:w-1/3">
+    {{ with .Site.Params.about.image }}
+    <img
+      src="{{ . }}"
+      alt="{{ $.Site.Params.about.name }}"
+      class="rounded-full shadow-lg w-64 h-64 object-cover mx-auto"
+    />
+    {{ end }}
+  </div>
+  <div class="md:w-2/3">
+    <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+      {{ i18n "aboutMe" }}
+    </h2>
+    <h3 class="text-xl text-gray-700 dark:text-gray-200 mb-4">
+      {{ .Site.Params.about.name }} - {{ .Site.Params.about.title }}
+    </h3>
+    <div class="prose dark:prose-invert max-w-none">
+      {{ .Site.Params.about.description | markdownify }}
+    </div>
+    <div class="mt-6 space-x-4">
+      {{ with .Site.Params.about.certifications }}
+      <div class="flex flex-wrap gap-2">
+        {{ range . }}
+        <span
+          class="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-sm"
+        >
+          {{ . }}
+        </span>
         {{ end }}
+      </div>
+      {{ end }}
     </div>
-    <div class="md:w-2/3">
-        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-            {{ i18n "aboutMe" }}
-        </h2>
-        <h3 class="text-xl text-gray-700 dark:text-gray-200 mb-4">
-            {{ .Site.Params.about.name }} - {{ .Site.Params.about.title }}
-        </h3>
-        <div class="prose dark:prose-invert max-w-none">
-            {{ .Site.Params.about.description | markdownify }}
-        </div>
-        <div class="mt-6 space-x-4">
-            {{ with .Site.Params.about.certifications }}
-            <div class="flex flex-wrap gap-2">
-                {{ range . }}
-                <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-sm">
-                    {{ . }}
-                </span>
-                {{ end }}
-            </div>
-            {{ end }}
-        </div>
-    </div>
+  </div>
 </div>

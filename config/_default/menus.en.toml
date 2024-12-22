@@ -1,0 +1,61 @@
+# Menus principais
+[[main]]
+identifier = "treatments"
+name = "Treatments"
+url = "/treatments/"
+weight = 10
+
+[[main]]
+parent = "treatments"
+name = "Therapeutic Massage"
+url = "/treatments/therapeutic-massage/"
+weight = 1
+
+[[main]]
+parent = "treatments"
+name = "Relaxation Massage"
+url = "/treatments/relaxation-massage/"
+weight = 2
+
+[[main]]
+parent = "treatments"
+name = "Osteopathy"
+url = "/treatments/osteopathy/"
+weight = 3
+
+[[main]]
+parent = "treatments"
+name = "View All"
+url = "/treatments/"
+weight = 4
+
+[[main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[main]]
+name = "About"
+url = "/about/"
+weight = 2
+
+[[main]]
+name = "Contact"
+url = "/contact/"
+weight = 3
+
+# Menus do footer
+[[footer]]
+name = "Terms & Conditions"
+url = "/terms-and-conditions/"
+weight = 1
+
+[[footer]]
+name = "Privacy Policy"
+url = "/privacy-policy/"
+weight = 2
+
+[[footer]]
+name = "Cookie Policy"
+url = "/cookie-policy/"
+weight = 3

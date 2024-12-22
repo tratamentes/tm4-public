@@ -1,0 +1,61 @@
+# Menus principais
+[[main]]
+identifier = "tratamientos"
+name = "Tratamientos"
+url = "/tratamientos/"
+weight = 10
+
+[[main]]
+parent = "tratamientos"
+name = "Massagem Terapêutica"
+url = "/tratamientos/masaje-terapeutico/"
+weight = 1
+
+[[main]]
+parent = "tratamientos"
+name = "Massagem Relaxamento"
+url = "/tratamientos/massagem-relajacion/"
+weight = 2
+
+[[main]]
+parent = "tratamientos"
+name = "Osteopatía"
+url = "/tratamientos/osteopatia/"
+weight = 3
+
+[[main]]
+parent = "tratamientos"
+name = "Ver Todos"
+url = "/tratamientos/"
+weight = 4
+
+[[main]]
+name = "Inicio"
+url = "/"
+weight = 1
+
+[[main]]
+name = "Sobre"
+url = "/sobre/"
+weight = 2
+
+[[main]]
+name = "Contacto"
+url = "/contacto/"
+weight = 3
+
+# Menus do footer
+[[footer]]
+name = "Términos y Condiciones"
+url = "/terminos-y-condiciones/"
+weight = 1
+
+[[footer]]
+name = "Política de Privacidad"
+url = "/politica-de-privacidad/"
+weight = 2
+
+[[footer]]
+name = "Política de Cookies"
+url = "/politica-de-cookies//"
+weight = 3

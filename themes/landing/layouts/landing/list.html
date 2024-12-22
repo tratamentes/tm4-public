@@ -2,52 +2,61 @@
 <!-- Resto do código... -->
 
 <div class="container mx-auto px-4 py-12">
-    <header class="mb-12">
-        <h1 class="text-4xl font-bold text-gray-900 mb-4">{{ .Title }}</h1>
-        {{ with .Description }}
-            <p class="text-xl text-gray-600">{{ . }}</p>
-        {{ end }}
-    </header>
-
-    {{ with .Content }}
-        <div class="prose prose-lg max-w-none mb-12">
-            {{ . }}
-        </div>
+  <header class="mb-12">
+    <h1 class="text-4xl font-bold text-gray-900 mb-4">{{ .Title }}</h1>
+    {{ with .Description }}
+    <p class="text-xl text-gray-600">{{ . }}</p>
     {{ end }}
+  </header>
 
-    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {{ range .Pages }}
-            <article class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
-                {{ with .Params.image }}
-                    <img 
-                        src="{{ . }}" 
-                        alt="{{ $.Title }}"
-                        class="w-full h-48 object-cover"
-                    >
-                {{ end }}
-                <div class="p-6">
-                    <h2 class="text-2xl font-semibold mb-3">
-                        <a href="{{ .RelPermalink }}" class="text-gray-900 hover:text-primary-600">
-                            {{ .LinkTitle }}
-                        </a>
-                    </h2>
-                    {{ with .Description }}
-                        <p class="text-gray-600 mb-4">{{ . }}</p>
-                    {{ else }}
-                        <p class="text-gray-600 mb-4">{{ .Summary }}</p>
-                    {{ end }}
-                    <a 
-                        href="{{ .RelPermalink }}" 
-                        class="inline-flex items-center text-primary-600 hover:text-primary-700"
-                    >
-                        {{ i18n "read_more" }} 
-                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                        </svg>
-                    </a>
-                </div>
-            </article>
+  {{ with .Content }}
+  <div class="prose prose-lg max-w-none mb-12">{{ . }}</div>
+  {{ end }}
+
+  <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+    {{ range .Pages }}
+    <article
+      class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow"
+    >
+      {{ with .Params.image }}
+      <img src="{{ . }}" alt="{{ $.Title }}" class="w-full h-48 object-cover" />
+      {{ end }}
+      <div class="p-6">
+        <h2 class="text-2xl font-semibold mb-3">
+          <a
+            href="{{ .RelPermalink }}"
+            class="text-gray-900 hover:text-primary-600"
+          >
+            {{ .LinkTitle }}
+          </a>
+        </h2>
+        {{ with .Description }}
+        <p class="text-gray-600 mb-4">{{ . }}</p>
+        {{ else }}
+        <p class="text-gray-600 mb-4">{{ .Summary }}</p>
         {{ end }}
-    </div>
+        <a
+          href="{{ .RelPermalink }}"
+          class="inline-flex items-center text-primary-600 hover:text-primary-700"
+        >
+          {{ i18n "read_more" }}
+          <svg
+            class="w-4 h-4 ml-2"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9 5l7 7-7 7"
+            />
+          </svg>
+        </a>
+      </div>
+    </article>
+    {{ end }}
+  </div>
 </div>
 {{ end }}

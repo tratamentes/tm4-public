@@ -1,140 +1,182 @@
-{{/* Analytics Partial - Versão Cookieless quando possível */}}
-
-{{/* Google Analytics 4 - Cookieless */}}
-{{ if and site.Params.analytics.googleAnalytics site.Params.analytics.googleAnalyticsID }}
-<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.Params.analytics.googleAnalyticsID }}"></script>
+{{/* Analytics Partial - Versão Cookieless quando possível */}} {{/* Google
+Analytics 4 - Cookieless */}} {{ if and site.Params.analytics.googleAnalytics
+site.Params.analytics.googleAnalyticsID }}
+<script
+  async
+  src="https://www.googletagmanager.com/gtag/js?id={{ site.Params.analytics.googleAnalyticsID }}"
+></script>
 <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', '{{ site.Params.analytics.googleAnalyticsID }}', {
-        client_storage: 'none',
-        client_id: '{{ now.Unix }}' + Math.random().toString(36).substring(2),
-        anonymize_ip: true,
-        allow_google_signals: false,
-        allow_ad_personalization_signals: false,
-        restricted_data_processing: true
-    });
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+  gtag('config', '{{ site.Params.analytics.googleAnalyticsID }}', {
+    client_storage: 'none',
+    client_id: '{{ now.Unix }}' + Math.random().toString(36).substring(2),
+    anonymize_ip: true,
+    allow_google_signals: false,
+    allow_ad_personalization_signals: false,
+    restricted_data_processing: true,
+  });
 </script>
-{{ end }}
-
-{{/* Google Tag Manager - Cookieless */}}
-{{ if and site.Params.analytics.googleTagManager site.Params.analytics.googleTagManagerID }}
+{{ end }} {{/* Google Tag Manager - Cookieless */}} {{ if and
+site.Params.analytics.googleTagManager site.Params.analytics.googleTagManagerID
+}}
 <script>
-(function(w,d,s,l,i){
+  (function (w, d, s, l, i) {
     w[l] = w[l] || [];
     w[l].push({
-        'gtm.start': new Date().getTime(),
-        event: 'gtm.js',
-        'config': {
-            'storage': 'none',
-            'clientId': '{{ now.Unix }}' + Math.random().toString(36).substring(2),
-            'storeGac': false,
-            'allowAdFeatures': false,
-            'anonymizeIp': true
-        }
+      'gtm.start': new Date().getTime(),
+      event: 'gtm.js',
+      config: {
+        storage: 'none',
+        clientId: '{{ now.Unix }}' + Math.random().toString(36).substring(2),
+        storeGac: false,
+        allowAdFeatures: false,
+        anonymizeIp: true,
+      },
     });
-    var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),
-        dl=l!='dataLayer'?'&l='+l:'';
-    j.async=true;
-    j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl+'&gtm_cookie_enabled=0';
-    f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','{{ site.Params.analytics.googleTagManagerID }}');
+    var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s),
+      dl = l != 'dataLayer' ? '&l=' + l : '';
+    j.async = true;
+    j.src =
+      'https://www.googletagmanager.com/gtm.js?id=' +
+      i +
+      dl +
+      '&gtm_cookie_enabled=0';
+    f.parentNode.insertBefore(j, f);
+  })(
+    window,
+    document,
+    'script',
+    'dataLayer',
+    '{{ site.Params.analytics.googleTagManagerID }}'
+  );
 </script>
 <noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id={{ site.Params.analytics.googleTagManagerID }}&gtm_cookie_enabled=0"
-            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  <iframe
+    src="https://www.googletagmanager.com/ns.html?id={{ site.Params.analytics.googleTagManagerID }}&gtm_cookie_enabled=0"
+    height="0"
+    width="0"
+    style="display: none; visibility: hidden"
+  ></iframe>
 </noscript>
-{{ end }}
-
-{{/* Microsoft Clarity - Configuração mínima de cookies */}}
-{{ if and site.Params.analytics.microsoftClarity site.Params.analytics.microsoftClarityID }}
+{{ end }} {{/* Microsoft Clarity - Configuração mínima de cookies */}} {{ if and
+site.Params.analytics.microsoftClarity site.Params.analytics.microsoftClarityID
+}}
 <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;
-        t.src="https://www.clarity.ms/tag/"+i+"?ref=cookieless";
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "{{ site.Params.analytics.microsoftClarityID }}");
-    
-    // Configurações adicionais para minimizar coleta de dados
-    clarity("set", "privacy", {
-        disableSession: true,
-        disableCookie: true,
-        disableStorage: true
-    });
-</script>
-{{ end }}
+  (function (c, l, a, r, i, t, y) {
+    c[a] =
+      c[a] ||
+      function () {
+        (c[a].q = c[a].q || []).push(arguments);
+      };
+    t = l.createElement(r);
+    t.async = 1;
+    t.src = 'https://www.clarity.ms/tag/' + i + '?ref=cookieless';
+    y = l.getElementsByTagName(r)[0];
+    y.parentNode.insertBefore(t, y);
+  })(
+    window,
+    document,
+    'clarity',
+    'script',
+    '{{ site.Params.analytics.microsoftClarityID }}'
+  );
 
-{{/* Facebook Pixel - Meta Pixel com configuração mínima */}}
-{{ if and site.Params.analytics.facebookPixel site.Params.analytics.facebookPixelID }}
+  // Configurações adicionais para minimizar coleta de dados
+  clarity('set', 'privacy', {
+    disableSession: true,
+    disableCookie: true,
+    disableStorage: true,
+  });
+</script>
+{{ end }} {{/* Facebook Pixel - Meta Pixel com configuração mínima */}} {{ if
+and site.Params.analytics.facebookPixel site.Params.analytics.facebookPixelID }}
 <script>
-!function(f,b,e,v,n,t,s){
-    if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v+"?cookieless=1";s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    
-    fbq('init', '{{ site.Params.analytics.facebookPixelID }}', {
-        external_id: '{{ now.Unix }}' + Math.random().toString(36).substring(2)
-    });
-    fbq('track', 'PageView');
-    
-    // Configurações adicionais para minimizar cookies
-    fbq('consent', 'revoke');
-    fbq('dataProcessingOptions', ['LDU'], 0, 0);
+  !(function (f, b, e, v, n, t, s) {
+    if (f.fbq) return;
+    n = f.fbq = function () {
+      n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+    };
+    if (!f._fbq) f._fbq = n;
+    n.push = n;
+    n.loaded = !0;
+    n.version = '2.0';
+    n.queue = [];
+    t = b.createElement(e);
+    t.async = !0;
+    t.src = v + '?cookieless=1';
+    s = b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t, s);
+  })(
+    window,
+    document,
+    'script',
+    'https://connect.facebook.net/en_US/fbevents.js'
+  );
+
+  fbq('init', '{{ site.Params.analytics.facebookPixelID }}', {
+    external_id: '{{ now.Unix }}' + Math.random().toString(36).substring(2),
+  });
+  fbq('track', 'PageView');
+
+  // Configurações adicionais para minimizar cookies
+  fbq('consent', 'revoke');
+  fbq('dataProcessingOptions', ['LDU'], 0, 0);
 </script>
 <noscript>
-    <img height="1" width="1" style="display:none" 
-        src="https://www.facebook.com/tr?id={{ site.Params.analytics.facebookPixelID }}&ev=PageView&noscript=1&cookieless=1"/>
+  <img
+    height="1"
+    width="1"
+    style="display: none"
+    alt="facebook pixel"
+    src="https://www.facebook.com/tr?id={{ site.Params.analytics.facebookPixelID }}&ev=PageView&noscript=1&cookieless=1"
+  />
 </noscript>
-{{ end }}
-
-{{/* Script comum para todas as ferramentas */}}
+{{ end }} {{/* Script comum para todas as ferramentas */}}
 <script>
-    // Gerador de ID de sessão único
-    const generateSessionId = () => {
-        return '{{ now.Unix }}' + Math.random().toString(36).substring(2);
+  // Gerador de ID de sessão único
+  const generateSessionId = () => {
+    return '{{ now.Unix }}' + Math.random().toString(36).substring(2);
+  };
+
+  // ID de sessão único para esta visita
+  window.sessionId = generateSessionId();
+
+  // Função para tracking unificado
+  window.trackEvent = function (eventName, eventData) {
+    const data = {
+      ...eventData,
+      session_id: window.sessionId,
+      timestamp: new Date().toISOString(),
+      page_url: window.location.href,
+      page_title: document.title,
     };
-    
-    // ID de sessão único para esta visita
-    window.sessionId = generateSessionId();
-    
-    // Função para tracking unificado
-    window.trackEvent = function(eventName, eventData) {
-        const data = {
-            ...eventData,
-            session_id: window.sessionId,
-            timestamp: new Date().toISOString(),
-            page_url: window.location.href,
-            page_title: document.title
-        };
 
-        // Google Analytics 4
-        if (typeof gtag === 'function') {
-            gtag('event', eventName, data);
-        }
+    // Google Analytics 4
+    if (typeof gtag === 'function') {
+      gtag('event', eventName, data);
+    }
 
-        // Google Tag Manager
-        if (typeof dataLayer !== 'undefined') {
-            dataLayer.push({
-                event: eventName,
-                ...data
-            });
-        }
+    // Google Tag Manager
+    if (typeof dataLayer !== 'undefined') {
+      dataLayer.push({
+        event: eventName,
+        ...data,
+      });
+    }
 
-        // Microsoft Clarity
-        if (typeof clarity === 'function') {
-            clarity('set', eventName, data);
-        }
+    // Microsoft Clarity
+    if (typeof clarity === 'function') {
+      clarity('set', eventName, data);
+    }
 
-        // Facebook Pixel
-        if (typeof fbq === 'function') {
-            fbq('trackCustom', eventName, data);
-        }
-    };
+    // Facebook Pixel
+    if (typeof fbq === 'function') {
+      fbq('trackCustom', eventName, data);
+    }
+  };
 </script>

@@ -32,3 +32,9 @@ node_modules/
 .vscode
 *.swp
 *.swo
+node_modules/
+.env
+public/
+resources/
+.hugo_build.lock
+package-lock.json

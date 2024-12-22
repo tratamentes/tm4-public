@@ -1,0 +1,24 @@
+# config/_default/languages.toml
+[pt]
+  languageName = "Português"
+  contentDir = "content/pt"
+  weight = 1
+  title = "TrataMentes - Terapia Manual & Massagem | João Goulart"
+  [pt.params]
+    lang = "pt"
+
+[en]
+  languageName = "English"
+  contentDir = "content/en"
+  weight = 2
+  title = "TrataMentes - Manual Therapy & Massage | João Goulart"
+  [en.params]
+    lang = "en"
+
+[es]
+  languageName = "Español"
+  contentDir = "content/es"
+  weight = 3
+  title = "TrataMentes - Terapia Manual & Masaje | João Goulart"
+  [es.params]
+    lang = "es"

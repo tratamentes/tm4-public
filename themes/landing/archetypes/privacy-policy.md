@@ -3,7 +3,6 @@ title: "Política de Privacidade"
 date: {{ .Date }}
 lastmod: {{ .Date }}
 draft: true
-menu: footer
 company:
   name: "{{ replace .Name "-" " " | title }}"
   owner: ""

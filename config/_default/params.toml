@@ -1,0 +1,92 @@
+# config/_default/params.toml
+description = "Massoterapeuta experiente com formação em osteopatia. Disponibilizo um tratamento holístico, combinando técnicas de massagem e conhecimentos em saúde. No meu espaço acolhedor, encontrará o ambiente perfeito para relaxar e cuidar de si. O seu bem-estar é a minha prioridade."
+author = "TrataMentes"
+logo = "/images/logo-tipo-tratamentes-horizontal-inv-verde-DFE9CE.svg"
+debug = true
+googleApiKey = "AIzaSyDaAyhHYJ0mctY9TKUTqzvpekC3G6Qjk2w"
+
+[colors]
+  primary = "#4A90E2"
+  secondary = "#2C5282"
+  accent = "#48BB78"
+
+[fonts]
+  heading = "Fraunces"
+  body = "Inter"
+
+[contact]
+  email = "joao.goulart@tratamentes.pt"
+  phone = "+351 937 543 312"
+  addresses = [
+    "Rua Braamcamp 88, 3Esq, 1250-012 Lisboa",
+    "Rua Jorge Colaço 32A, 1700-253 Lisboa"
+  ]
+  lat = "38.721462924719525"
+  lng = "-9.152609455660295"
+
+[social]
+  facebook = "https://www.facebook.com/trata.mentes/"
+  instagram = "https://instagram.com/trata.mentes"
+  linkedin = "https://linkedin.com/company/tratamentes"
+
+[analytics]
+  googleAnalytics = false
+  googleAnalyticsID = "G-XXXXXXXXXX"
+  googleTagManager = false
+  googleTagManagerID = "GTM-XXXXXX"
+  microsoftClarity = false
+  microsoftClarityID = "XXXXXXXX"
+  facebookPixel = false
+  facebookPixelID = "XXXXXXXXXX"
+
+[cookieConsent]
+  enable = true
+  type = "opt-in"
+  position = "bottom"
+
+[seo]
+  schema = true
+  openGraph = true
+  twitterCards = true
+
+[performance.images]
+  lazy = true
+  sizes = [480, 720, 1080, 1366, 1920]
+  formats = ["webp", "jpg"]
+  quality = 85
+
+[performance.assets]
+  minifyCSS = true
+  minifyJS = true
+  bundleCSS = true
+  bundleJS = true
+
+[performance.cache]
+  enableBrowser = true
+  maxAge = 31536000
+
+[performance.critical]
+  enable = true
+  includePaths = ["/", "/tratamentos/*"]
+
+[performance.preload]
+  fonts = true
+  criticalImages = true
+
+[performance.defer]
+  nonCriticalCSS = true
+  nonCriticalJS = true
+
+[performance.responsive]
+  breakpoints = ["sm", "md", "lg", "xl", "2xl"]
+  defaultBreakpoint = "lg"
+  mobileFriendly = true
+  touchOptimized = true
+
+[business]
+  name = "TrataMentes"
+  founder = "João Paulo Goulart"
+  location = "Lisboa"
+  country = "PT"
+  email = "joao.goulart@tratamentes.pt"
+  phone = "+351937543312"

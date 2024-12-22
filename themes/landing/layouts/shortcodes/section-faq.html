@@ -1,88 +1,87 @@
 <!-- layouts/shortcodes/section-faq.html -->
-{{ $title := .Get "title" | default "Dúvidas Frequentes" }}
-{{ $subtitle := .Get "subtitle" }}
-
-{{/* Coletar todas as FAQs dinamicamente */}}
-{{ $faqs := slice }}
-{{ $i := 1 }}
-{{ range seq 1 100 }}  {{/* Suporta até 100 FAQs - pode ajustar conforme necessário */}}
-    {{ $questionKey := printf "faq%d-question" $i }}
-    {{ $answerKey := printf "faq%d-answer" $i }}
-    
-    {{ with $.Get $questionKey }}
-        {{ $question := . }}
-        {{ $answer := $.Get $answerKey }}
-        {{ if and $question $answer }}
-            {{ $faqs = $faqs | append (dict "question" $question "answer" $answer) }}
-        {{ end }}
-    {{ else }}
-        {{ break }}
-    {{ end }}
-    {{ $i = add $i 1 }}
-{{ end }}
+{{ $title := .Get "title" | default "Dúvidas Frequentes" }} {{ $subtitle := .Get
+"subtitle" }} {{/* Coletar todas as FAQs dinamicamente */}} {{ $faqs := slice }}
+{{ $i := 1 }} {{ range seq 1 100 }} {{/* Suporta até 100 FAQs - pode ajustar
+conforme necessário */}} {{ $questionKey := printf "faq%d-question" $i }} {{
+$answerKey := printf "faq%d-answer" $i }} {{ with $.Get $questionKey }} {{
+$question := . }} {{ $answer := $.Get $answerKey }} {{ if and $question $answer
+}} {{ $faqs = $faqs | append (dict "question" $question "answer" $answer) }} {{
+end }} {{ else }} {{ break }} {{ end }} {{ $i = add $i 1 }} {{ end }}
 
 <section class="faq-section py-16 md:py-24 bg-gray-50">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-12">
-            <h2 class="text-3xl md:text-4xl font-bold font-heading mb-4">{{ $title }}</h2>
-            {{ with $subtitle }}
-            <p class="text-lg text-gray-600">{{ . }}</p>
-            {{ end }}
-        </div>
-
-        <div class="max-w-3xl mx-auto divide-y divide-gray-200">
-            {{ range $index, $faq := $faqs }}
-            <div class="faq-item py-6" x-data="{ open: false }">
-                <button 
-                    class="flex justify-between items-start w-full text-left group"
-                    @click="open = !open"
-                    aria-expanded="false"
-                    :aria-expanded="open"
-                >
-                    <h3 class="text-lg font-medium text-gray-900 pr-8 group-hover:text-primary-600 transition-colors">
-                        {{ $faq.question }}
-                    </h3>
-                    <span class="ml-6 flex-shrink-0">
-                        <svg 
-                            class="w-6 h-6 text-gray-400 group-hover:text-primary-600 transform transition-all duration-200"
-                            :class="{ 'rotate-180': open }"
-                            fill="none" 
-                            stroke="currentColor" 
-                            viewBox="0 0 24 24"
-                        >
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </span>
-                </button>
-                <div 
-                    class="mt-2 pr-12"
-                    x-show="open"
-                    x-collapse
-                    x-cloak
-                >
-                    <p class="text-gray-600">
-                        {{ $faq.answer | markdownify }}
-                    </p>
-                </div>
-            </div>
-            {{ end }}
-        </div>
-
-        {{/* CTA após as FAQs */}}
-        <div class="text-center mt-12">
-            <p class="text-lg text-gray-600 mb-4">
-                Ainda tem dúvidas? Entre em contato conosco
-            </p>
-            <a 
-                href="#contacto" 
-                class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
-                data-track-click="faq-contact-cta"
-            >
-                Fale Conosco
-                <svg class="ml-2 -mr-1 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                </svg>
-            </a>
-        </div>
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold font-display mb-4">
+        {{ $title }}
+      </h2>
+      {{ with $subtitle }}
+      <p class="text-lg text-gray-600">{{ . }}</p>
+      {{ end }}
     </div>
+
+    <div class="max-w-3xl mx-auto divide-y divide-gray-200">
+      {{ range $index, $faq := $faqs }}
+      <div class="faq-item py-6" x-data="{ open: false }">
+        <button
+          class="flex justify-between items-start w-full text-left group"
+          @click="open = !open"
+          aria-expanded="false"
+          :aria-expanded="open"
+        >
+          <h3
+            class="text-lg font-medium text-gray-900 pr-8 group-hover:text-primary-600 transition-colors"
+          >
+            {{ $faq.question }}
+          </h3>
+          <span class="ml-6 flex-shrink-0">
+            <svg
+              class="w-6 h-6 text-gray-400 group-hover:text-primary-600 transform transition-all duration-200"
+              :class="{ 'rotate-180': open }"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </span>
+        </button>
+        <div class="mt-2 pr-12" x-show="open" x-collapse x-cloak>
+          <p class="text-gray-600">{{ $faq.answer | markdownify }}</p>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+
+    {{/* CTA após as FAQs */}}
+    <div class="text-center mt-12">
+      <p class="text-lg text-gray-600 mb-4">
+        Ainda tem dúvidas? Entre em contato conosco
+      </p>
+      <a
+        href="#contacto"
+        class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
+        data-track-click="faq-contact-cta"
+      >
+        Fale Conosco
+        <svg
+          class="ml-2 -mr-1 w-5 h-5"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+          />
+        </svg>
+      </a>
+    </div>
+  </div>
 </section>

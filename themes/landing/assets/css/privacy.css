@@ -1,0 +1,24 @@
+/* Estilos específicos para a política de privacidade */
+.prose h2 {
+    @apply text-2xl font-semibold text-gray-900 mt-12 mb-6;
+}
+
+.prose h3 {
+    @apply text-xl font-medium text-gray-800 mt-8 mb-4;
+}
+
+.prose ul {
+    @apply space-y-2 my-6;
+}
+
+.prose li {
+    @apply text-gray-700;
+}
+
+.prose p {
+    @apply text-gray-700 leading-relaxed;
+}
+
+.prose a {
+    @apply text-primary-600 hover:text-primary-700 underline;
+}

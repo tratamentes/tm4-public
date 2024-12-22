@@ -1,95 +1,113 @@
 <div id="cookie-consent" class="cookie-consent">
-    <div class="cookie-consent-container">
-        <p>
-            {{ i18n "cookieMessage" }} 
-            <a href="{{ "/" | relLangURL }}politicaprivacidade" target="_blank">{{ i18n "privacyPolicy" }}</a>.
-        </p>
-        <div class="cookie-consent-buttons">
-            <button id="accept-cookies" class="btn">{{ i18n "accept" }}</button>
-            <button id="decline-cookies" class="btn">{{ i18n "decline" }}</button>
-        </div>
+  <div class="cookie-consent-container">
+    <p>
+      {{ i18n "cookie_notice" }} {{ range .Site.Menus.footer }} {{ if eq .Name
+      (i18n "privacy_policy") }}
+      <a
+        href="{{ .URL | relLangURL }}"
+        class="text-primary-300 hover:text-primary-400 underline"
+      >
+        {{ .Name }}
+      </a>
+      {{ end }} {{ end }}
+    </p>
+    <div class="cookie-consent-buttons">
+      <button id="accept-cookies" class="btn-cookie btn-cookie-accept">
+        {{ i18n "accept" }}
+      </button>
+      <button id="decline-cookies" class="btn-cookie btn-cookie-decline">
+        {{ i18n "decline" }}
+      </button>
     </div>
+  </div>
 </div>
 
-
-
-
 <script>
-document.addEventListener("DOMContentLoaded", function() {
+  document.addEventListener('DOMContentLoaded', function () {
     var consentPopup = document.getElementById('cookie-consent');
     var acceptCookies = document.getElementById('accept-cookies');
     var declineCookies = document.getElementById('decline-cookies');
-    
+
     function setCookie(name, value, days) {
-        var expires = "";
-        if (days) {
-            var date = new Date();
-            date.setTime(date.getTime() + (days*24*60*60*1000));
-            expires = "; expires=" + date.toUTCString();
-        }
-        document.cookie = name + "=" + (value || "") + expires + "; path=/";
+      var expires = '';
+      if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+        expires = '; expires=' + date.toUTCString();
+      }
+      document.cookie = name + '=' + (value || '') + expires + '; path=/';
     }
 
     function getCookie(name) {
-        var nameEQ = name + "=";
-        var ca = document.cookie.split(';');
-        for(var i=0;i < ca.length;i++) {
-            var c = ca[i];
-            while (c.charAt(0)==' ') c = c.substring(1,c.length);
-            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
-        }
-        return null;
+      var nameEQ = name + '=';
+      var ca = document.cookie.split(';');
+      for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+      }
+      return null;
     }
 
     function loadTrackingScripts() {
-        // Carrega Google Analytics
-        if (!document.getElementById('google-analytics')) {
-            var ga = document.createElement('script');
-            ga.src = 'https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXXX-X'; // Substitua pelo seu ID do Google Analytics
-            ga.async = true;
-            ga.id = 'google-analytics';
-            document.head.appendChild(ga);
-            
-            ga.onload = function() {
-                window.dataLayer = window.dataLayer || [];
-                function gtag() { dataLayer.push(arguments); }
-                gtag('js', new Date());
-                gtag('config', 'UA-XXXXXXXXX-X'); // Substitua pelo seu ID do Google Analytics
-            };
-        }
+      if (!document.getElementById('google-analytics')) {
+        var ga = document.createElement('script');
+        ga.src = 'https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXXX-X';
+        ga.async = true;
+        ga.id = 'google-analytics';
+        document.head.appendChild(ga);
 
-        // Carregar Facebook Pixel, Clarity, etc., de maneira similar
+        ga.onload = function () {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', 'UA-XXXXXXXXX-X');
+        };
+      }
     }
 
     function removeTrackingScripts() {
-        // Remove Google Analytics
-        var gaScript = document.getElementById('google-analytics');
-        if (gaScript) {
-            gaScript.parentNode.removeChild(gaScript);
-        }
-        
-        // Remover outros scripts, como Facebook Pixel, Clarity, etc., de maneira similar
+      var gaScript = document.getElementById('google-analytics');
+      if (gaScript) {
+        gaScript.parentNode.removeChild(gaScript);
+      }
     }
 
+    // Definir a função openCookieSettings globalmente
+    window.openCookieSettings = function () {
+      var currentConsent = getCookie('cookieConsent');
+      // Resetar o estado do popup
+      if (currentConsent === 'true') {
+        acceptCookies.classList.add('active');
+      } else if (currentConsent === 'false') {
+        declineCookies.classList.add('active');
+      }
+      // Mostrar o popup
+      consentPopup.style.display = 'block';
+    };
+
+    // Verificar cookie inicial
     if (getCookie('cookieConsent') === 'true') {
-        consentPopup.style.display = 'none';
-        loadTrackingScripts();
+      consentPopup.style.display = 'none';
+      loadTrackingScripts();
     } else if (getCookie('cookieConsent') === 'false') {
-        consentPopup.style.display = 'none';
+      consentPopup.style.display = 'none';
     } else {
-        consentPopup.style.display = 'block';
+      consentPopup.style.display = 'block';
     }
 
-    acceptCookies.addEventListener('click', function() {
-        setCookie('cookieConsent', 'true', 365);
-        consentPopup.style.display = 'none';
-        loadTrackingScripts();
+    acceptCookies.addEventListener('click', function () {
+      setCookie('cookieConsent', 'true', 365);
+      consentPopup.style.display = 'none';
+      loadTrackingScripts();
     });
 
-    declineCookies.addEventListener('click', function() {
-        setCookie('cookieConsent', 'false', 365);
-        consentPopup.style.display = 'none';
-        removeTrackingScripts();
+    declineCookies.addEventListener('click', function () {
+      setCookie('cookieConsent', 'false', 365);
+      consentPopup.style.display = 'none';
+      removeTrackingScripts();
     });
-});
+  });
 </script>

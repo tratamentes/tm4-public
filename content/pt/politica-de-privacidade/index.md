@@ -1,19 +1,18 @@
 ---
-title: "Política de Privacidade"
-translationKey: "privacy-policy"
+title: 'Política de Privacidade'
+translationKey: 'privacy-policy'
 date: 2024-03-23T14:00:00+01:00
 lastmod: 2024-03-23T14:00:00+01:00
 draft: false
-menu: footer
-type: "privacy"
-layout: "single"
+type: 'privacy'
+layout: 'single'
 company:
-  name: "TrataMentes"
-  owner: "João Paulo Goulart"
-  nif: "PT188000666"
-  address: "Rua Jorge Colaço, 32A, Alvalade, 1700-252 Lisboa"
-  email: "joao.goulart@tratamentes.pt"
-  phone: "+351937543312"
+  name: 'TrataMentes'
+  owner: 'João Paulo Goulart'
+  nif: 'PT188000666'
+  address: 'Rua Jorge Colaço, 32A, Alvalade, 1700-252 Lisboa'
+  email: 'joao.goulart@tratamentes.pt'
+  phone: '+351937543312'
 ---
 
 # Política de Privacidade
@@ -26,7 +25,7 @@ TrataMentes
 João Paulo Goulart  
 NIF: PT188000666  
 Morada: Rua Jorge Colaço, 32A, 1700-253 Lisboa  
-Email: joao.goulart@tratamentes.pt 
+Email: joao.goulart@tratamentes.pt
 Telefone: +351 937 543 312
 
 ## 2. Compromisso de Privacidade
@@ -36,6 +35,7 @@ A TrataMentes está empenhada em proteger a privacidade e os dados pessoais dos 
 ## 3. Dados Pessoais que Recolhemos
 
 ### 3.1 Através do Website
+
 - Nome completo
 - Número de telefone
 - Endereço de email
@@ -43,6 +43,7 @@ A TrataMentes está empenhada em proteger a privacidade e os dados pessoais dos 
 - Conteúdo da mensagem enviada através do formulário de contacto
 
 ### 3.2 Durante a Prestação de Serviços
+
 - Dados de identificação (nome completo, data de nascimento, NIF)
 - Dados de contacto (morada, telefone, email)
 - Dados profissionais (profissão, local de trabalho)
@@ -55,6 +56,7 @@ A TrataMentes está empenhada em proteger a privacidade e os dados pessoais dos 
 Os seus dados pessoais são tratados para as seguintes finalidades:
 
 ### 4.1 Prestação de Serviços
+
 - Agendamento e gestão de consultas
 - Realização de avaliações e tratamentos
 - Acompanhamento da evolução clínica
@@ -62,11 +64,13 @@ Os seus dados pessoais são tratados para as seguintes finalidades:
 - Faturação e cumprimento de obrigações legais
 
 ### 4.2 Comunicação
+
 - Resposta a pedidos de informação
 - Envio de lembretes de consultas
 - Comunicações relacionadas com o tratamento
 
 ### 4.3 Gestão do Website
+
 - Processamento de pedidos de contacto
 - Agendamento online através da plataforma BUK.PT
 - Análise e melhoria dos serviços online

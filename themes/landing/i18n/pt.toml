@@ -60,3 +60,12 @@ other = "Alternar menu"
 
 [read_more]
 other = "Ler mais"
+
+[skip_to_main]
+other="ir para o conteudo"
+
+[cookie_notice]
+  other= "Este site usa cookies para melhorar sua experiência."
+
+[configure_cookies]
+  other= "Configurar cookies"

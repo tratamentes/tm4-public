@@ -1,0 +1,36 @@
+# config/_default/config.toml
+baseURL = "http://dev.tratamentes.pt"
+theme = "landing"
+defaultContentLanguage = "pt"
+enableMultilingual = true
+enableRobotsTXT = true
+enableGitInfo = true
+
+# Adicionar configuração dos módulos e shortcodes
+[module]
+  [[module.mounts]]
+    source = "layouts/shortcodes"
+    target = "layouts/shortcodes"
+  [[module.mounts]]
+    source = "themes/landing/layouts/shortcodes"
+    target = "layouts/shortcodes"
+
+[frontmatter]
+  lastmod = ["lastmod", ":git", "date", "publishDate"]
+
+[permalinks]
+  services = "/tratamentos/:slug/"
+
+[build]
+  writeStats = true
+  logFile = "hugo-build.log"
+
+[server]
+  logFile = "hugo-server.log"
+
+[build.processing]
+  css = true
+  js = true
+
+[markup.goldmark.renderer]
+  unsafe = true

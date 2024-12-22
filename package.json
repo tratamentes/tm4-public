@@ -1,22 +1,38 @@
 {
   "name": "tm4",
   "version": "1.0.0",
-  "main": "tailwind.config.js",
+  "description": "TM4 Hugo Theme",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "netlify dev",
-    "build": "netlify build"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "@netlify/functions": "^2.8.2",
-    "googleapis": "^144.0.0"
+    "start": "hugo server -D",
+    "build": "hugo",
+    "format": "npx prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css,html}\"",
+    "lint:css": "npx stylelint \"**/*.css\"",
+    "lint:html": "npx htmlhint \"themes/landing/layouts/**/*.html\"",
+    "lint": "npm run lint:css && npm run lint:html",
+    "clean": "if exist public rd /s /q public && if exist resources rd /s /q resources && if exist node_modules rd /s /q node_modules",
+    "prebuild": "npm run clean"
   },
   "devDependencies": {
-    "dotenv": "^16.4.5",
-    "netlify-cli": "^12.14.0"
+    "htmlhint": "^1.1.4",
+    "prettier": "^3.2.5",
+    "rimraf": "^5.0.5",
+    "stylelint": "^16.2.1",
+    "stylelint-config-standard": "^36.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lru-cache": "^11.0.2"
   }
 }

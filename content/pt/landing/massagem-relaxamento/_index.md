@@ -1,18 +1,19 @@
 ---
-title: "Massagem de Relaxamento | Escape do Stress Diário"
-description: "Desfrute de 60 minutos de puro relaxamento com nossa massagem terapêutica. Alivie o stress e recupere sua energia vital."
-type: "landing"
-layout: "single"
+title: 'Massagem de Relaxamento | Escape do Stress Diário'
+description: 'Desfrute de 60 minutos de puro relaxamento com nossa massagem terapêutica. Alivie o stress e recupere sua energia vital.'
+type: 'landing'
+layout: 'single'
 date: 2024-11-19
 lastmod: 2024-11-22
 draft: false
-translationKey: "relaxation-massage"
-image: "/images/sportsMassage.jpg"
+translationKey: 'relaxation-massage'
+image: '/images/sportsMassage.jpg'
 schema:
-  service: "Massagem Terapêutica"
-  price: "50"
-  duration: "60"
+  service: 'Massagem Terapêutica'
+  price: '50'
+  duration: '60'
 ---
+
 
 {{< section-hero
     title="Massagem de Relaxamento"

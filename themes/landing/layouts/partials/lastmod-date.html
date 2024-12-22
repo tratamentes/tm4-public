@@ -1,3 +1,0 @@
-{{ $date := .Lastmod }}
-{{ $formattedDate := $date.Format (time.Format "2 January 2006" $date) }}
-{{ i18n "lastModified" $formattedDate }}
