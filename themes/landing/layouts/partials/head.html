@@ -1,97 +1,127 @@
-    {{/* Meta tags básicas */}}
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="theme-color" content="{{ site.Params.colors.primary }}">
-    {{/* Preconnect para recursos externos */}}
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    {{ if site.Params.analytics.googleAnalytics }}<link rel="preconnect" href="https://www.google-analytics.com" crossorigin>{{ end }}
-    {{/* Título e Meta tags SEO */}}<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ with .Title }}{{ . }} | {{ end }}{{ site.Title }}{{ end }}</title>
-    <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with site.Params.description }}{{ . }}{{ end }}{{ end }}">
-    <meta name="author" content="{{ site.Params.author }}">
-    {{ with .Keywords }}<meta name="keywords" content="{{ delimit . ", " }}">{{ end }}
-  
-    {{ partial "schema.html" . }}
-    {{/* Canonical e alternates para idiomas */}}
-    <link rel="canonical" href="{{ .Permalink }}">
+{{/* Meta tags básicas */}}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="theme-color" content="{{ site.Params.colors.primary }}">
+{{/* Preconnect para recursos externos */}}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
 
-    {{ with .Page }}
-    {{- /* Link para a própria página */ -}}
-    <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">
-    {{- /* Links para as traduções */ -}}
-    {{ range .Translations }}
-    <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">{{ end }}{{ end }}
+{{ if site.Params.analytics.googleAnalytics }}
+<link rel="preconnect" href="https://www.google-analytics.com" crossorigin>{{ end }}
+{{/* Título e Meta tags SEO */}}<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ with .Title }}{{ . }} | {{ end }}{{
+    site.Title }}{{ end }}</title>
+<meta name="description"
+    content="{{ with .Description }}{{ . }}{{ else }}{{ with site.Params.description }}{{ . }}{{ end }}{{ end }}">
+<meta name="author" content="{{ site.Params.author }}">
+{{ with .Keywords }}
+<meta name="keywords" content="{{ delimit . " , " }}">{{ end }}
 
-    {{/* CSS crítico inline */}}
-    {{ if site.Params.performance.critical.enable }}{{ with resources.Get "css/critical.css" }}
-    <style>
-        {{ .Content | safeCSS }}
-    </style>
-    {{ end }}{{ end }}
+{{ partial "schema.html" . }}
+{{/* Canonical e alternates para idiomas */}}
+<link rel="canonical" href="{{ .Permalink }}">
 
+{{ with .Page }}
+{{- /* Link para a própria página */ -}}
+<link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">
+{{- /* Links para as traduções */ -}}
+{{ range .Translations }}
+<link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">{{ end }}{{ end }}
 
-    {{/* Tailwind CSS */}}
-    {{ with resources.Get "css/main.css" }}{{ $css := . | css.PostCSS }}<link rel="stylesheet" href="{{ $css.RelPermalink }}">{{ end }}
-    {{- /* CSS customizado */ -}}
-    {{ with resources.Get "css/style.css" }}{{ $style := . }}{{ if hugo.IsProduction }}{{ $style = $style | minify | fingerprint }}
-    <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous">
-    {{ else }}
-    <link rel="stylesheet" href="{{ $style.RelPermalink }}">{{ end }}{{ end }}
-    {{- /* Fontes com carregamento otimizado */ -}}
-    {{ if site.Params.performance.preload.fonts }}<link rel="preload" href="https://fonts.googleapis.com/css2?family={{ site.Params.fonts.heading | default "Montserrat" }}:wght@400;600;700&family={{ site.Params.fonts.body | default "Inter" }}:wght@400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link href="https://fonts.googleapis.com/css2?family={{ site.Params.fonts.heading | default "Montserrat" }}:wght@400;600;700&family={{ site.Params.fonts.body | default "Inter" }}:wght@400;500;600&display=swap" rel="stylesheet">
-    </noscript>{{ end }}
-    {{- /* Incluir CSS landing */ -}} {{ with resources.Get "css/landing.css" }} {{ $landingCss := . | minify | fingerprint }} <link rel="stylesheet" href="{{ $landingCss.RelPermalink }}" integrity="{{ $landingCss.Data.Integrity }}" crossorigin="anonymous">
-    {{ end }}
-    
-    {{- /* Scripts específicos para landing pages */ -}}
-    <script defer>{{/* Animações de entrada ao scroll */}} 
-        document.addEventListener('DOMContentLoaded', function() {
-            const observerOptions = {
-                root: null,
-                threshold: 0.1,
-                rootMargin: '0px'
-            };
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            }, observerOptions);
-
-            document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-        });
-    </script>
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+{{/* CSS crítico inline */}}
+{{ if site.Params.performance.critical.enable }}{{ with resources.Get "css/critical.css" }}
+<style>
+    {
+            {
+            .Content | safeCSS
+        }
+    }
+</style>
+{{ end }}{{ end }}
 
 
+<!-- Importar CSS gerado pelo Tailwind -->
+{{ $styles := resources.Get "css/styles.css" | postCSS (dict "config" "./postcss.config.js") }}
+<link rel="stylesheet" href="{{ $styles.Permalink }}">
 
-    {{- /* Open Graph */ -}}
-    {{ if site.Params.seo.openGraph }}
-    <meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">
-    <meta property="og:title" content="{{ .Title }}">
-    <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ with site.Params.description }}{{ . }}{{ end }}{{ end }}">
-    <meta property="og:url" content="{{ .Permalink }}">
-    <meta property="og:site_name" content="{{ site.Title }}">
-    {{ with site.Params.logo }}<meta property="og:image" content="{{ . | absURL }}">{{ end }}
-    {{ end }}
+<!-- Outros estilos customizados (se necessário) -->
+{{ with resources.Get "css/style.css" }}
+{{ $style := . }}
+{{ if hugo.IsProduction }}
+{{ $style = $style | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous">
+{{ else }}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}">
+{{ end }}
+{{ end }}
 
-    {{- /* Twitter Cards */ -}}
-    {{ if site.Params.seo.twitterCards }}
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="{{ .Title }}">
-    <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ with site.Params.description }}{{ . }}{{ end }}{{ end }}">
-    {{ with site.Params.logo }}<meta name="twitter:image" content="{{ . | absURL }}">{{ end }}
-    {{ end }}
-    {{/* Favicon */ -}}
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="manifest" href="/site.webmanifest">
+{{- /* Fontes com carregamento otimizado */ -}}
+{{ if site.Params.performance.preload.fonts }}
+<link rel="preload" href="https://fonts.googleapis.com/css2?family={{ site.Params.fonts.heading | default " Montserrat"
+    }}:wght@400;600;700&family={{ site.Params.fonts.body | default "Inter" }}:wght@400;500;600&display=swap" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link href="https://fonts.googleapis.com/css2?family={{ site.Params.fonts.heading | default " Montserrat"
+        }}:wght@400;600;700&family={{ site.Params.fonts.body | default "Inter" }}:wght@400;500;600&display=swap"
+        rel="stylesheet">
+</noscript>{{ end }}
+{{- /* Incluir CSS landing */ -}} {{ with resources.Get "css/landing.css" }} {{ $landingCss := . | minify | fingerprint
+}}
+<link rel="stylesheet" href="{{ $landingCss.RelPermalink }}" integrity="{{ $landingCss.Data.Integrity }}"
+    crossorigin="anonymous">
+{{ end }}
+
+{{- /* Scripts específicos para landing pages */ -}}
+<script defer>{ {/* Animações de entrada ao scroll */ } }
+    document.addEventListener('DOMContentLoaded', function () {
+        const observerOptions = {
+            root: null,
+            threshold: 0.1,
+            rootMargin: '0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    });
+</script>
+<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+
+
+{{- /* Open Graph */ -}}
+{{ if site.Params.seo.openGraph }}
+<meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">
+<meta property="og:title" content="{{ .Title }}">
+<meta property="og:description"
+    content="{{ with .Description }}{{ . }}{{ else }}{{ with site.Params.description }}{{ . }}{{ end }}{{ end }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:site_name" content="{{ site.Title }}">
+{{ with site.Params.logo }}
+<meta property="og:image" content="{{ . | absURL }}">{{ end }}
+{{ end }}
+
+{{- /* Twitter Cards */ -}}
+{{ if site.Params.seo.twitterCards }}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ .Title }}">
+<meta name="twitter:description"
+    content="{{ with .Description }}{{ . }}{{ else }}{{ with site.Params.description }}{{ . }}{{ end }}{{ end }}">
+{{ with site.Params.logo }}
+<meta name="twitter:image" content="{{ . | absURL }}">{{ end }}
+{{ end }}
+{{/* Favicon */ -}}
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
