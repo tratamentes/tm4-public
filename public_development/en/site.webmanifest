@@ -1,0 +1,37 @@
+{
+    "name": "TrataMentes - Terapia Manual & Massagem",
+    "short_name": "TrataMentes",
+    "description": "Massoterapeuta experiente com formação em osteopatia. Tratamento holístico, combinando técnicas de massagem e conhecimentos em saúde.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#4A90E2",
+    "orientation": "portrait",
+    "icons": [
+        {
+            "src": "/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "shortcuts": [
+        {
+            "name": "Agendar Massagem",
+            "short_name": "Agendar",
+            "description": "Agende sua sessão de massagem",
+            "url": "/#contacto",
+            "icons": [{ "src": "/icon-192x192.png", "sizes": "192x192" }]
+        }
+    ],
+    "lang": "pt-PT",
+    "dir": "ltr",
+    "prefer_related_applications": false,
+    "categories": ["health", "lifestyle"]
+}

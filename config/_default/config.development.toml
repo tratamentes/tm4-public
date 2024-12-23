@@ -1,0 +1,10 @@
+# /config/_default/config.development.toml
+
+baseURL = "http://localhost:1313"
+theme = "landing"
+languageCode = "pt-PT"
+defaultContentLanguage = "pt"
+title = "TrataMentes - DEV"
+publishDir = "public_development"
+enableRobotsTXT = true
+enableGitInfo = true

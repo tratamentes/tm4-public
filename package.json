@@ -4,8 +4,9 @@
   "description": "TM4 Hugo Theme",
   "private": true,
   "scripts": {
-    "start": "hugo server -D",
-    "build": "hugo --minify && npx tailwindcss -i ./themes/landing/assets/css/style.css -o ./themes/landing/static/css/styles.css --minify",
+    "dev": "hugo server --config config/_default/config.development.toml --environment development -D",
+    "dev:build": "hugo --config config/_default/config.development.toml --environment development && npx tailwindcss -i ./themes/landing/assets/css/style.css -o ./themes/landing/static/css/styles.css",
+    "prod": "hugo --config config/_default/config.toml --environment production --minify && npx tailwindcss -i ./themes/landing/assets/css/style.css -o ./themes/landing/static/css/styles.css --minify",
     "format": "npx prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css,html}\"",
     "clean": "npx rimraf public resources node_modules",
     "prebuild": "npm run clean"
