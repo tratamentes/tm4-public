@@ -5,22 +5,16 @@
   "private": true,
   "scripts": {
     "start": "hugo server -D",
-    "build": "hugo",
+    "build": "hugo --minify && npx tailwindcss -i ./themes/landing/assets/css/style.css -o ./themes/landing/static/css/styles.css --minify",
     "format": "npx prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css,html}\"",
-    "lint:css": "npx stylelint \"**/*.css\"",
-    "lint:html": "npx htmlhint \"themes/landing/layouts/**/*.html\"",
-    "lint": "npm run lint:css && npm run lint:html",
-    "clean": "if exist public rd /s /q public && if exist resources rd /s /q resources && if exist node_modules rd /s /q node_modules",
+    "clean": "npx rimraf public resources node_modules",
     "prebuild": "npm run clean"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
-    "htmlhint": "^1.1.4",
     "postcss": "^8.4.49",
     "prettier": "^3.2.5",
     "rimraf": "^5.0.5",
-    "stylelint": "^16.2.1",
-    "stylelint-config-standard": "^36.0.0",
     "tailwindcss": "^3.4.17"
   },
   "engines": {
@@ -32,21 +26,5 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "lru-cache": "^11.0.2"
-  },
-  "main": "tailwind.config.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tratamentes/tm4.git"
-  },
-  "keywords": [],
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/tratamentes/tm4/issues"
-  },
-  "homepage": "https://github.com/tratamentes/tm4#readme"
+  ]
 }

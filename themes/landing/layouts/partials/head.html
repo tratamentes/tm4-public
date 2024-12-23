@@ -48,15 +48,11 @@
 <link rel="stylesheet" href="{{ $styles.Permalink }}">
 
 <!-- Outros estilos customizados (se necessário) -->
-{{ with resources.Get "css/style.css" }}
-{{ $style := . }}
-{{ if hugo.IsProduction }}
-{{ $style = $style | minify | fingerprint }}
-<link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous">
-{{ else }}
-<link rel="stylesheet" href="{{ $style.RelPermalink }}">
-{{ end }}
-{{ end }}
+{{ $styles := resources.Get "css/style.css" | postCSS (dict "config" "./postcss.config.js") | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}"  crossorigin="anonymous">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preload" as="style" href="{{ $styles.RelPermalink }}">
 
 {{- /* Fontes com carregamento otimizado */ -}}
 {{ if site.Params.performance.preload.fonts }}
