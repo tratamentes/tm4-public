@@ -1,0 +1,136 @@
+// base/_typography.scss
+@use '../abstracts/typography' as *;
+@use '../abstracts/colors' as *;
+@use 'sass:map';
+
+// Estilos base do documento
+html {
+  -webkit-text-size-adjust: none;
+}
+
+body {
+  @include typography($size: 'base', $family: 'primary', $weight: 'light');
+  line-height: map.get($line-heights, 'tight');
+  word-wrap: break-word;
+}
+
+// Headings base
+h1, h2, h3, h4, h5, h6 {
+  @include font-family('heading');
+  @include font-weight('light');
+  margin: 0;
+  position: relative;
+}
+
+// Estilos específicos de heading (do original)
+h1, .style1 {
+  @include typography($size: '3xl', $family: 'heading', $weight: 'light');
+  @include letter-spacing('tighter');
+  @include line-height('snug');
+  color: color('neutral', 'dark');
+  width: 100%;
+}
+
+h2, .style2 {
+  @include typography($size: 'base', $family: 'primary', $weight: 'light');
+  @include line-height('loose');
+  color: color('neutral', 'gray-100');
+}
+
+h3, .style3 {
+  @include typography($size: '2xl', $family: 'heading', $weight: 'light');
+  @include letter-spacing('tighter');
+  @include line-height('snug');
+  color: color('neutral', 'dark');
+  width: 100%;
+}
+
+// Elementos de texto
+p {
+  position: relative;
+  margin: 0;
+  
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}
+
+// Elementos inline
+strong {
+  color: inherit;
+  font-weight: map.get($font-weights, 'bold');
+}
+
+em {
+  font-style: italic;
+}
+
+code {
+  @include font-family('mono');
+  @include font-size('sm');
+  @include font-weight('normal');
+  background-color: rgba(144, 144, 144, 0.25);
+  border-radius: 0.25em;
+  padding: 0.25em 0.5em;
+  margin: 0 0.25em;
+}
+
+// Links
+a {
+  color: inherit;
+  text-decoration: underline;
+  transition: color 0.25s ease;
+
+  &[onclick]:not([href]) {
+    cursor: pointer;
+  }
+}
+
+// Listas
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+// Outros elementos
+sub {
+  font-size: smaller;
+  vertical-align: sub;
+}
+
+sup {
+  font-size: smaller;
+  vertical-align: super;
+}
+
+mark {
+  background-color: rgba(144, 144, 144, 0.25);
+  color: inherit;
+}
+
+// Quebra de texto
+pre {
+  -webkit-overflow-scrolling: touch;
+}
+
+// Classes utilitárias
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-center {
+  text-align: center;
+}
+
+@media (max-width: 736px) {
+  h1, .style1 {
+    @include letter-spacing(-0.065625rem);
+    @include font-size('3xl');
+  }
+  
+  h2, .style2 {
+    @include letter-spacing(0);
+    @include font-size('base');
+  }
+}

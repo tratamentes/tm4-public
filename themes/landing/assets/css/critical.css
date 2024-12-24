@@ -1,37 +1,41 @@
-/* critical.css - Apenas estilos absolutamente necessários para o primeiro render */
 :root {
-  /* Cores Principais */
-  --color-primary: #C4863D;     /* Dourado Principal */
-  --color-primary-light: #F2B266; /* Dourado Claro */
-  --color-primary-dark: #8B5E2A;  /* Dourado Escuro */
-  
-  /* Tons Neutros Essenciais */
-  --color-neutral-50: #F7F6F2;   /* Fundo Claro */
-  --color-neutral-700: #3B3B3B;  /* Texto Principal */
+  // Cores do nosso sistema de cores
+  --color-primary-base: #C4863D;
+  --color-primary-light: #F2B266;
+  --color-primary-dark: #8B5E2A;
+  --color-neutral-light: #F7F6F2;
+  --color-neutral-dark: #3B3B3B;
+
+  // Layout e espaçamento
+  --container-padding: 1rem;
+  --container-max-width: 1400px;
+  --site-padding: 1rem;
 }
 
-/* Tipografia Crítica */
 body {
-  font-family: 'Inter', system-ui, sans-serif;
+  min-height: 100vh;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  color: var(--color-neutral-700);
-  background-color: var(--color-neutral-50);
+  color: var(--color-neutral-dark);
+  background-color: var(--color-neutral-light);
+  -webkit-text-size-adjust: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Layout Crítico */
 .container {
-  width: min(1400px, 100% - 2rem);
+  width: min(var(--container-max-width), 100% - (var(--container-padding) * 2));
   margin-inline: auto;
+  padding-inline: var(--container-padding);
 }
 
-/* Header Crítico */
 .site-header {
   position: relative;
-  padding: 1rem 0;
+  padding-block: var(--site-padding);
+  width: 100%;
 }
 
-/* Hero Crítico (se existir na primeira tela) */
 .hero {
   min-height: 80vh;
   display: flex;

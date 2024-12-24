@@ -1,0 +1,58 @@
+// _colors.scss
+@use 'sass:color';
+@use 'sass:map';
+$colors: (
+  'primary': (
+    'base': #F2B266,    // Cor laranja/âmbar principal
+    'light': color.adjust(#F2B266, $lightness: 10%),
+    'dark': color.adjust(#F2B266, $lightness: -10%),
+    'secondary': #C4863D  // Variação mais escura do laranja c48649
+  ),
+  
+  'neutral': (
+    'white': #FFFFFF,    // Branco puro
+    'light': #F7F6F2,    // Fundo muito claro
+    'gray-100': #8C8A88, // Cinza claro para texto secundário
+    'gray-200': #8F8F8F, // Cinza médio
+    'gray-300': #6B6967, // Cinza para labels
+    'gray-400': #636363, // Cinza para texto
+    'gray-500': #4D4D4D, // Cinza escuro
+    'dark': #3B3B3B,     // Quase preto para texto principal
+    'black': #000000     // Preto puro
+  ),
+  
+  'accent': (
+    'blue': #36ABFF     // Cor de destaque/ação
+  )
+);
+
+// Função helper para acessar cores
+@function color($category, $tone: 'base') {
+  @if map.has-key($colors, $category) {
+    $category-map: map.get($colors, $category);
+    @if map.has-key($category-map, $tone) {
+      @return map.get($category-map, $tone);
+    }
+    @error "Tom '#{$tone}' não encontrado na categoria '#{$category}'";
+  }
+  @error "Categoria de cor '#{$category}' não encontrada";
+}
+
+// Exemplos de uso:get
+// color('primary', 'base')      -> #F2B266
+// color('neutral', 'gray-100')  -> #8C8A88
+// color('accent', 'blue')       -> #36ABFF
+
+// Sistema de opacidade para cores
+@function alpha($color, $opacity) {
+  @return rgba($color, $opacity);
+}
+
+// Variáveis CSS para uso dinâmico
+:root {
+  @each $category, $tones in $colors {
+    @each $tone, $value in $tones {
+      --color-#{$category}-#{$tone}: #{$value};
+    }
+  }
+}

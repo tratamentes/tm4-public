@@ -1,64 +1,54 @@
-<!-- partial/header.html -->
+{{/* layouts/partials/header.html */}}
 <header class="site-header">
   <div class="header-container">
     <!-- Logo Section -->
-    <div class="site-branding">
-      <a href="{{ "/" | relLangURL }}" class="logo-link">
-        <img src="{{ .Site.Params.logo | relURL }}"
+    <div class="brand">
+      <a href="{{ "/" | relLangURL }}" class="logo">
+        <img src="{{ .Site.Params.logo | relURL }}" 
              alt="{{ .Site.Title }}" 
-             class="site-logo"
              width="216" 
              height="60">
       </a>
     </div>
 
-    <!-- Navigation Toggle -->
-    <button class="nav-toggle" 
-            aria-label="{{ "Toggle menu" | i18n }}"
-            aria-controls="primary-menu"
-            aria-expanded="false">
-      <span class="toggle-icon"></span>
+    <!-- Mobile Menu Toggle -->
+    <button class="menu-toggle" aria-label="{{ T "toggleMenu" }}" aria-expanded="false">
+      <span class="hamburger"></span>
     </button>
 
-    <!-- Main Navigation -->
-    <nav class="site-navigation" id="primary-menu" aria-label="{{ "Primary Menu" | i18n }}">
-      <ul class="nav-menu">
+    <!-- Navigation -->
+    <nav class="main-nav">
+      <ul class="nav-list">
+        {{ $currentPage := . }}
         {{ range .Site.Menus.main }}
-        <li class="nav-item {{ if .HasChildren }}has-dropdown{{ end }} {{ if and .Page (or (eq .URL .Page.RelPermalink) (.Page.IsMenuCurrent "main" .)) }}is-active{{ end }}">
-          <a href="{{ .URL | relLangURL }}" class="nav-link">{{ .Name }}</a>
           {{ if .HasChildren }}
-          <ul class="dropdown-menu">
-            {{ range .Children }}
-            <li class="dropdown-item {{ if and .Page (or (eq .URL .Page.RelPermalink) (.Page.IsMenuCurrent "main" .)) }}is-active{{ end }}">
-              <a href="{{ .URL | relLangURL }}" class="dropdown-link">{{ .Name }}</a>
-            </li>
-            {{ end }}
-          </ul>
+          <li class="nav-item has-dropdown {{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}">
+            <a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+            <ul class="dropdown">
+              {{ range .Children }}
+              <li class="dropdown-item {{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+                <a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+              </li>
+              {{ end }}
+            </ul>
+          </li>
+          {{ else }}
+          <li class="nav-item {{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+            <a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+          </li>
           {{ end }}
-        </li>
         {{ end }}
-        <li class="nav-item">
-          <a href="https://tratamentes.buk.pt/" class="nav-link nav-link--schedule">
-            {{ "schedule" | i18n }}
-          </a>
+        <!-- Language Selector -->
+        <li class="nav-item lang-selector">
+          <select id="lang-select" onChange="window.location.href=this.value" aria-label="{{ T "selectLanguage" }}">
+            {{ range $.Site.Home.AllTranslations }}
+            <option value="{{ .Permalink }}" {{ if eq $.Lang .Lang }}selected{{ end }}>
+              {{ .Language.LanguageName }}
+            </option>
+            {{ end }}
+          </select>
         </li>
       </ul>
-
-      <!-- Language Selector -->
-      <div class="lang-selector">
-        <label for="lang-select" class="sr-only">{{ "select_language" | i18n }}</label>
-        <select id="lang-select" class="lang-select" onChange="window.location.href=this.value">
-          {{ range .Site.Languages }}
-          {{ $langURL := "/" }}
-          {{ if ne .Lang $.Site.Language.Lang }}
-          {{ $langURL = printf "/%s/" .Lang }}
-          {{ end }}
-          <option value="{{ $langURL }}" {{ if eq .Lang $.Lang }}selected{{ end }}>
-            {{ .LanguageName }}
-          </option>
-          {{ end }}
-        </select>
-      </div>
     </nav>
   </div>
 </header>

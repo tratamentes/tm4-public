@@ -5,14 +5,19 @@
     {{ end }}
 {{ end }}
 
-{{/* CSS Principal */}}
-{{ $mainStyles := resources.Get "css/live.css" }}
-{{ if $mainStyles }}
-    {{ $mainStyles = $mainStyles }}
-    {{ if hugo.IsProduction }}
-        {{ $mainStyles = $mainStyles | minify | fingerprint }}
-    {{ end }}
-    <link rel="stylesheet" href="{{ $mainStyles.RelPermalink }}"
-        {{ if hugo.IsProduction }}integrity="{{ $mainStyles.Data.Integrity }}"{{ end }} 
-        crossorigin="anonymous">
+{{/* Configurações para o SCSS */}}
+{{ $opts := dict "targetPath" "css/styles.css" "outputStyle" "compressed" "enableSourceMap" true "includePaths" (slice "themes/landing/assets/scss") }}
+
+{{/* Carregar e compilar o SCSS principal */}}
+{{ $styles := resources.Get "scss/main.scss" | css.Sass $opts }}
+
+{{/* Aplicar minify e fingerprint em produção */}}
+{{ if hugo.IsProduction }}
+    {{ $styles = $styles | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" 
+          integrity="{{ $styles.Data.Integrity }}" 
+          crossorigin="anonymous">
+{{ else }}
+    {{/* Apenas linkar o CSS gerado no desenvolvimento */}}
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
 {{ end }}

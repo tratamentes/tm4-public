@@ -1,18 +1,14 @@
-/* _footer.css */
-/* Base */
-@import './base/_variables.css';
-@import './base/_reset.css';
-@import './base/_typography.css';
+// Base
+@import "base/reset";
 
-/* Components */
-@import './components/_buttons.css';
-@import './components/_navigation.css';
-@import './components/_cards.css';
 
-/* Layouts */
-@import './layouts/_header.css';
-@import './layouts/_footer.css';
-@import './layouts/_landing.css';
+// Components
+
+
+
+// Layouts
+@import "layouts/header";
+
 
 /* {
     border: 1px solid red !important; /* Usa !important para sobrepor outros estilos */

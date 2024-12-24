@@ -1,0 +1,63 @@
+/* Reset básico */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Remove estilos de lista */
+  ul, ol {
+    list-style: none;
+  }
+  
+  /* Remove decoração de links */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Imagens responsivas */
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Formulários */
+  button, input, select, textarea {
+    font: inherit;
+    color: inherit;
+  }
+  
+  /* Remove aparência padrão em alguns elementos */
+  button {
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  
+  /* Melhorar legibilidade */
+  html {
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Melhoria de acessibilidade para elementos focáveis */
+  a:focus, button:focus {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+  }
+  
+  /* Esconder elementos visualmente mas manter para leitores de tela */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }

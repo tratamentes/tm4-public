@@ -1,262 +1,54 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>TrataMentes - Terapia Manual &amp; Massagem | João Goulart</title><link>http://localhost:1313/pt/</link><description>Recent content on TrataMentes - Terapia Manual &amp; Massagem | João Goulart</description><generator>Hugo</generator><language>pt</language><lastBuildDate>Sun, 22 Dec 2024 20:07:33 +0000</lastBuildDate><atom:link href="http://localhost:1313/pt/index.xml" rel="self" type="application/rss+xml"/><item><title>Massagem Terapêutica</title><link>http://localhost:1313/pt/tratamentos/massagem-terapeutica/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/pt/tratamentos/massagem-terapeutica/</guid><description>&lt;p>cum raio o que se passa aqui!?&lt;/p></description></item><item><title>Massagem de Relaxamento | Escape do Stress Diário</title><link>http://localhost:1313/pt/landing/massagem-relaxamento/</link><pubDate>Tue, 19 Nov 2024 00:00:00 +0000</pubDate><guid>http://localhost:1313/pt/landing/massagem-relaxamento/</guid><description>&lt;section class="hero-section relative min-h-[55vh] md:min-h-[70vh] lg:min-h-[65vh] flex items-center overflow-hidden">
- 
- &lt;div class="absolute inset-0 z-0">
- 
- &lt;img 
- src="http://localhost:1313/images/sportsMassage.jpg" 
- alt="Massagem de Relaxamento"
- class="w-full h-full object-cover scale-105 animate-subtle-zoom
- 
- brightness-150
- 
- "
- 
- >
- &lt;div class="absolute inset-0 
- 
- bg-gradient-to-t from-black/80 via-black/60 to-black/30
- 
- ">&lt;/div>
- 
- &lt;/div>
-
- 
- &lt;div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-20 md:pt-24">
- &lt;div class="max-w-2xl relative">
- 
- &lt;h1 class="
- text-3xl md:text-4xl lg:text-5xl 
- font-bold mb-4 font-display 
- text-white 
- drop-shadow-[0_2px_10px_rgba(0,0,0,0.3)]
- animate-fade-in-up
- leading-tight
- ">
- Massagem de Relaxamento
- &lt;/h1>
- 
-
- 
- &lt;div class="relative mb-6 animate-fade-in-up animation-delay-200">
- &lt;p class="
- text-lg md:text-xl lg:text-2xl
- text-white
- relative z-10
- drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]
- leading-relaxed
- ">
- 60 minutos dedicados exclusivamente ao seu bem-estar e relaxamento
- &lt;/p>
- &lt;/div>
- 
-
- &lt;div class="
- flex flex-wrap items-center gap-3 md:gap-4 mb-8
- animate-fade-in-up animation-delay-400
- ">
- 
- &lt;div class="
- flex items-center
- px-3 py-2 md:px-4 md:py-2.5 rounded-xl
- backdrop-blur-sm
- bg-white/10
- border border-white/20
- text-white
- shadow-[0_4px_12px_rgba(0,0,0,0.1)]
- hover:bg-white/15 transition-all
- ">
- &lt;svg class="w-4 h-4 md:w-5 md:h-5 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
- &lt;circle cx="12" cy="12" r="10" stroke-width="2"/>
- &lt;path stroke-linecap="round" stroke-width="2" d="M12 6v6l4 4"/>
- &lt;/svg>
- &lt;span class="text-sm md:text-base font-medium">60 minutos&lt;/span>
- &lt;/div>
- 
-
- 
- &lt;div class="
- flex items-center
- px-3 py-2 md:px-4 md:py-2.5 rounded-xl
- backdrop-blur-sm
- bg-white/10
- border border-white/20
- text-white
- shadow-[0_4px_12px_rgba(0,0,0,0.1)]
- hover:bg-white/15 transition-all
- ">
- &lt;svg class="w-4 h-4 md:w-5 md:h-5 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
- &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.121 15.536c-1.171 1.952-3.07 1.952-4.242 0m4.242 0c1.172-1.952 1.172-4.124 0-6.076M9.879 9.464c1.172-1.952 3.07-1.952 4.242 0M8 10.5h4m-4 3h4m9-1.5a9 9 0 11-18 0 9 9 0 0118 0z"/>
- &lt;/svg>
- &lt;span class="text-sm md:text-base font-medium">50€&lt;/span>
- &lt;/div>
- 
- &lt;/div>
-
- 
- &lt;div class="animate-fade-in-up animation-delay-600">
- &lt;a 
- href="#contacto"
- class="
- group
- inline-flex items-center
- px-6 py-3 md:px-7 md:py-3.5
- text-sm md:text-base font-medium
- rounded-full
- bg-gradient-to-r from-accent-400 to-accent-500
- hover:from-accent-500 hover:to-accent-600
- text-white
- transition-all duration-300
- transform hover:scale-[1.02]
- shadow-[0_4px_20px_rgba(0,0,0,0.25)]
- hover:shadow-[0_6px_24px_rgba(0,0,0,0.3)]
- border border-white/10
- relative
- overflow-hidden
- mb-8 md:mb-0
- "
- data-track-click="hero-cta"
- >
- &lt;div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 transform -skew-x-12">&lt;/div>
- &lt;span class="relative z-10">Agendar Massagem&lt;/span>
- &lt;svg class="
- ml-2 w-4 h-4
- relative z-10
- transition-transform
- duration-300
- group-hover:translate-x-1
- " fill="none" stroke="currentColor" viewBox="0 0 24 24">
- &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
- &lt;/svg>
- &lt;div class="absolute inset-0 bg-gradient-to-b from-white/10 to-transparent opacity-50">&lt;/div>
- &lt;/a>
- &lt;/div>
- &lt;/div>
- &lt;/div>
-&lt;/section>
-
-&lt;style>
-@keyframes subtle-zoom {
- 0% { transform: scale(1.05); }
- 100% { transform: scale(1.12); }
-}
-
-@keyframes fade-in-up {
- 0% {
- opacity: 0;
- transform: translateY(20px);
- }
- 100% {
- opacity: 1;
- transform: translateY(0);
- }
-}
-
-.animate-subtle-zoom {
- animation: subtle-zoom 20s ease-in-out infinite alternate;
-}
-
-.animate-fade-in-up {
- animation: fade-in-up 0.6s ease-out forwards;
-}
-
-.animation-delay-200 {
- animation-delay: 200ms;
-}
-
-.animation-delay-400 {
- animation-delay: 400ms;
-}
-
-.animation-delay-600 {
- animation-delay: 600ms;
-}
-&lt;/style>
- 
-
-&lt;section class="benefits-section py-4 md:py-180 bg-gray-50">
- &lt;div class="container mx-auto px-4 sm:px-6 lg:px-8">
- &lt;div class="text-center max-w-3xl mx-auto mb-12">
- &lt;h2 class="text-3xl md:text-4xl font-bold font-display mb-4">
- Benefícios da Massagem
- &lt;/h2>
- 
- &lt;p class="text-lg text-gray-600">Descubra como a massagem de relaxamento pode melhorar sua qualidade de vida&lt;/p></description></item><item><title>Política de Cookies</title><link>http://localhost:1313/pt/politica-de-cookies/</link><pubDate>Sat, 23 Mar 2024 14:00:00 +0100</pubDate><guid>http://localhost:1313/pt/politica-de-cookies/</guid><description>&lt;h1 id="política-de-cookies">Política de Cookies&lt;/h1>
-&lt;p>&lt;strong>Última atualização:&lt;/strong> 23 de novembro de 2024&lt;/p>
-&lt;h2 id="1-o-que-são-cookies">1. O que são Cookies?&lt;/h2>
-&lt;p>Cookies são pequenos arquivos de texto que os websites colocam no seu dispositivo durante a navegação. Servem para fornecer várias funções essenciais, como memorizar as suas preferências, entender como usa o nosso website e melhorar sua experiência online.&lt;/p>
-&lt;h2 id="2-como-utilizamos-os-cookies">2. Como Utilizamos os Cookies&lt;/h2>
-&lt;h3 id="21-cookies-essenciais">2.1 Cookies Essenciais&lt;/h3>
-&lt;ul>
-&lt;li>&lt;strong>Finalidade&lt;/strong>: Fundamentais para o funcionamento básico do website&lt;/li>
-&lt;li>&lt;strong>Duração&lt;/strong>: Sessão/Persistente&lt;/li>
-&lt;li>&lt;strong>Exemplos&lt;/strong>:
-&lt;ul>
-&lt;li>Cookies de sessão para manter você conectado&lt;/li>
-&lt;li>Cookies de segurança para proteção contra fraudes&lt;/li>
-&lt;li>Cookies de funcionalidade básica do site&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h3 id="22-cookies-de-desempenho">2.2 Cookies de Desempenho&lt;/h3>
-&lt;ul>
-&lt;li>&lt;strong>Finalidade&lt;/strong>: Análise de uso e desempenho do website&lt;/li>
-&lt;li>&lt;strong>Duração&lt;/strong>: Persistente (até 2 anos)&lt;/li>
-&lt;li>&lt;strong>Exemplos&lt;/strong>:
-&lt;ul>
-&lt;li>Google Analytics (análise de tráfego)&lt;/li>
-&lt;li>Métricas de velocidade de carregamento&lt;/li>
-&lt;li>Padrões de navegação&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h3 id="23-cookies-de-funcionalidade">2.3 Cookies de Funcionalidade&lt;/h3>
-&lt;ul>
-&lt;li>&lt;strong>Finalidade&lt;/strong>: Melhorar sua experiência de navegação&lt;/li>
-&lt;li>&lt;strong>Duração&lt;/strong>: Persistente (até 1 ano)&lt;/li>
-&lt;li>&lt;strong>Exemplos&lt;/strong>:
-&lt;ul>
-&lt;li>Preferências de idioma&lt;/li>
-&lt;li>Configurações de acessibilidade&lt;/li>
-&lt;li>Informações de formulários preenchidos&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h3 id="24-cookies-de-marketing">2.4 Cookies de Marketing&lt;/h3>
-&lt;ul>
-&lt;li>&lt;strong>Finalidade&lt;/strong>: Marketing e publicidade direcionada&lt;/li>
-&lt;li>&lt;strong>Duração&lt;/strong>: Persistente (até 1 ano)&lt;/li>
-&lt;li>&lt;strong>Exemplos&lt;/strong>:
-&lt;ul>
-&lt;li>Rastreamento de conversões&lt;/li>
-&lt;li>Publicidade personalizada&lt;/li>
-&lt;li>Redes sociais&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h2 id="3-gestão-de-cookies">3. Gestão de Cookies&lt;/h2>
-&lt;h3 id="31-como-controlar-os-cookies">3.1 Como Controlar os Cookies&lt;/h3>
-&lt;p>Você pode controlar os cookies através de:&lt;/p></description></item><item><title>Política de Privacidade</title><link>http://localhost:1313/pt/politica-de-privacidade/</link><pubDate>Sat, 23 Mar 2024 14:00:00 +0100</pubDate><guid>http://localhost:1313/pt/politica-de-privacidade/</guid><description>&lt;h1 id="política-de-privacidade">Política de Privacidade&lt;/h1>
-&lt;p>&lt;strong>Última atualização:&lt;/strong> 23 de novembro de 2024&lt;/p>
-&lt;h2 id="1-identificação-do-responsável-pelo-tratamento">1. Identificação do Responsável pelo Tratamento&lt;/h2>
-&lt;p>TrataMentes&lt;br>
-João Paulo Goulart&lt;br>
-NIF: PT188000666&lt;br>
-Morada: Rua Jorge Colaço, 32A, 1700-253 Lisboa&lt;br>
-Email: &lt;a href="mailto:joao.goulart@tratamentes.pt">joao.goulart@tratamentes.pt&lt;/a>
-Telefone: +351 937 543 312&lt;/p>
-&lt;h2 id="2-compromisso-de-privacidade">2. Compromisso de Privacidade&lt;/h2>
-&lt;p>A TrataMentes está empenhada em proteger a privacidade e os dados pessoais dos seus clientes e utilizadores. Esta política de privacidade descreve como recolhemos, utilizamos, tratamos e protegemos os seus dados pessoais, em conformidade com o Regulamento Geral de Proteção de Dados (RGPD) e demais legislação aplicável.&lt;/p></description></item><item><title>Termos e Condições</title><link>http://localhost:1313/pt/termos-e-condicoes/</link><pubDate>Sat, 23 Mar 2024 14:00:00 +0100</pubDate><guid>http://localhost:1313/pt/termos-e-condicoes/</guid><description>&lt;h1 id="termos-e-condições">Termos e Condições&lt;/h1>
-&lt;p>&lt;strong>Última atualização:&lt;/strong> 23 de novembro de 2024&lt;/p>
-&lt;h2 id="1-introdução">1. Introdução&lt;/h2>
-&lt;p>Estes Termos e Condições regulam a prestação de serviços de terapia manual e massagem pela TrataMentes, estabelecendo os direitos e obrigações entre o prestador de serviços e os clientes.&lt;/p>
-&lt;h2 id="2-serviços">2. Serviços&lt;/h2>
-&lt;h3 id="21-descrição-dos-serviços">2.1 Descrição dos Serviços&lt;/h3>
-&lt;p>A TrataMentes oferece:&lt;/p>
-&lt;ul>
-&lt;li>Massagem terapêutica&lt;/li>
-&lt;li>Massagem de relaxamento&lt;/li>
-&lt;li>Terapia manual&lt;/li>
-&lt;li>Outros tratamentos terapêuticos relacionados&lt;/li>
-&lt;/ul>
-&lt;h3 id="22-qualificações-profissionais">2.2 Qualificações Profissionais&lt;/h3>
-&lt;p>Todos os serviços são prestados por profissionais devidamente qualificados e certificados, em conformidade com a legislação portuguesa.&lt;/p></description></item><item><title>Sobre mim</title><link>http://localhost:1313/pt/sobre/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/pt/sobre/</guid><description>&lt;p>Seu conteúdo sobre você aqui&amp;hellip;&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>TrataMentes - Terapia Manual &amp; Massagem | João Goulart</title>
+    <link>http://dev.tratamentes.pt/pt/</link>
+    <description>Recent content on TrataMentes - Terapia Manual &amp; Massagem | João Goulart</description>
+    <generator>Hugo</generator>
+    <language>pt</language>
+    <lastBuildDate>Tue, 24 Dec 2024 02:10:55 +0000</lastBuildDate>
+    <atom:link href="http://dev.tratamentes.pt/pt/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Massagem Terapêutica</title>
+      <link>http://dev.tratamentes.pt/pt/tratamentos/massagem-terapeutica/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://dev.tratamentes.pt/pt/tratamentos/massagem-terapeutica/</guid>
+      <description>&lt;p&gt;cum raio o que se passa aqui!?&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Massagem de Relaxamento | Escape do Stress Diário</title>
+      <link>http://dev.tratamentes.pt/pt/landing/massagem-relaxamento/</link>
+      <pubDate>Tue, 19 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>http://dev.tratamentes.pt/pt/landing/massagem-relaxamento/</guid>
+      <description>&lt;section class=&#34;hero-section relative min-h-[55vh] md:min-h-[70vh] lg:min-h-[65vh] flex items-center overflow-hidden&#34;&gt;&#xD;&#xA;    &#xD;&#xA;    &lt;div class=&#34;absolute inset-0 z-0&#34;&gt;&#xD;&#xA;        &#xD;&#xA;        &lt;img &#xD;&#xA;            src=&#34;http://dev.tratamentes.pt/images/sportsMassage.jpg&#34; &#xD;&#xA;            alt=&#34;Massagem de Relaxamento&#34;&#xD;&#xA;            class=&#34;w-full h-full object-cover scale-105 animate-subtle-zoom&#xD;&#xA;                &#xD;&#xA;                    brightness-150&#xD;&#xA;                &#xD;&#xA;            &#34;&#xD;&#xA;            &#xD;&#xA;        &gt;&#xD;&#xA;        &lt;div class=&#34;absolute inset-0 &#xD;&#xA;            &#xD;&#xA;                bg-gradient-to-t from-black/80 via-black/60 to-black/30&#xD;&#xA;            &#xD;&#xA;        &#34;&gt;&lt;/div&gt;&#xD;&#xA;        &#xD;&#xA;    &lt;/div&gt;&#xD;&#xA;&#xD;&#xA;    &#xD;&#xA;    &lt;div class=&#34;container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-20 md:pt-24&#34;&gt;&#xD;&#xA;        &lt;div class=&#34;max-w-2xl relative&#34;&gt;&#xD;&#xA;            &#xD;&#xA;            &lt;h1 class=&#34;&#xD;&#xA;                text-3xl md:text-4xl lg:text-5xl &#xD;&#xA;                font-bold mb-4 font-display &#xD;&#xA;                text-white &#xD;&#xA;                drop-shadow-[0_2px_10px_rgba(0,0,0,0.3)]&#xD;&#xA;                animate-fade-in-up&#xD;&#xA;                leading-tight&#xD;&#xA;            &#34;&gt;&#xD;&#xA;                Massagem de Relaxamento&#xD;&#xA;            &lt;/h1&gt;&#xD;&#xA;            &#xD;&#xA;&#xD;&#xA;            &#xD;&#xA;            &lt;div class=&#34;relative mb-6 animate-fade-in-up animation-delay-200&#34;&gt;&#xD;&#xA;                &lt;p class=&#34;&#xD;&#xA;                    text-lg md:text-xl lg:text-2xl&#xD;&#xA;                    text-white&#xD;&#xA;                    relative z-10&#xD;&#xA;                    drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]&#xD;&#xA;                    leading-relaxed&#xD;&#xA;                &#34;&gt;&#xD;&#xA;                    60 minutos dedicados exclusivamente ao seu bem-estar e relaxamento&#xD;&#xA;                &lt;/p&gt;&#xD;&#xA;            &lt;/div&gt;&#xD;&#xA;            &#xD;&#xA;&#xD;&#xA;            &lt;div class=&#34;&#xD;&#xA;                flex flex-wrap items-center gap-3 md:gap-4 mb-8&#xD;&#xA;                animate-fade-in-up animation-delay-400&#xD;&#xA;            &#34;&gt;&#xD;&#xA;                &#xD;&#xA;                &lt;div class=&#34;&#xD;&#xA;                    flex items-center&#xD;&#xA;                    px-3 py-2 md:px-4 md:py-2.5 rounded-xl&#xD;&#xA;                    backdrop-blur-sm&#xD;&#xA;                    bg-white/10&#xD;&#xA;                    border border-white/20&#xD;&#xA;                    text-white&#xD;&#xA;                    shadow-[0_4px_12px_rgba(0,0,0,0.1)]&#xD;&#xA;                    hover:bg-white/15 transition-all&#xD;&#xA;                &#34;&gt;&#xD;&#xA;                    &lt;svg class=&#34;w-4 h-4 md:w-5 md:h-5 mr-2&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke=&#34;currentColor&#34;&gt;&#xD;&#xA;                        &lt;circle cx=&#34;12&#34; cy=&#34;12&#34; r=&#34;10&#34; stroke-width=&#34;2&#34;/&gt;&#xD;&#xA;                        &lt;path stroke-linecap=&#34;round&#34; stroke-width=&#34;2&#34; d=&#34;M12 6v6l4 4&#34;/&gt;&#xD;&#xA;                    &lt;/svg&gt;&#xD;&#xA;                    &lt;span class=&#34;text-sm md:text-base font-medium&#34;&gt;60 minutos&lt;/span&gt;&#xD;&#xA;                &lt;/div&gt;&#xD;&#xA;                &#xD;&#xA;&#xD;&#xA;                &#xD;&#xA;                &lt;div class=&#34;&#xD;&#xA;                    flex items-center&#xD;&#xA;                    px-3 py-2 md:px-4 md:py-2.5 rounded-xl&#xD;&#xA;                    backdrop-blur-sm&#xD;&#xA;                    bg-white/10&#xD;&#xA;                    border border-white/20&#xD;&#xA;                    text-white&#xD;&#xA;                    shadow-[0_4px_12px_rgba(0,0,0,0.1)]&#xD;&#xA;                    hover:bg-white/15 transition-all&#xD;&#xA;                &#34;&gt;&#xD;&#xA;                    &lt;svg class=&#34;w-4 h-4 md:w-5 md:h-5 mr-2&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke=&#34;currentColor&#34;&gt;&#xD;&#xA;                        &lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;2&#34; d=&#34;M14.121 15.536c-1.171 1.952-3.07 1.952-4.242 0m4.242 0c1.172-1.952 1.172-4.124 0-6.076M9.879 9.464c1.172-1.952 3.07-1.952 4.242 0M8 10.5h4m-4 3h4m9-1.5a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&#xD;&#xA;                    &lt;/svg&gt;&#xD;&#xA;                    &lt;span class=&#34;text-sm md:text-base font-medium&#34;&gt;50€&lt;/span&gt;&#xD;&#xA;                &lt;/div&gt;&#xD;&#xA;                &#xD;&#xA;            &lt;/div&gt;&#xD;&#xA;&#xD;&#xA;            &#xD;&#xA;            &lt;div class=&#34;animate-fade-in-up animation-delay-600&#34;&gt;&#xD;&#xA;                &lt;a &#xD;&#xA;                    href=&#34;#contacto&#34;&#xD;&#xA;                    class=&#34;&#xD;&#xA;                        group&#xD;&#xA;                        inline-flex items-center&#xD;&#xA;                        px-6 py-3 md:px-7 md:py-3.5&#xD;&#xA;                        text-sm md:text-base font-medium&#xD;&#xA;                        rounded-full&#xD;&#xA;                        bg-gradient-to-r from-accent-400 to-accent-500&#xD;&#xA;                        hover:from-accent-500 hover:to-accent-600&#xD;&#xA;                        text-white&#xD;&#xA;                        transition-all duration-300&#xD;&#xA;                        transform hover:scale-[1.02]&#xD;&#xA;                        shadow-[0_4px_20px_rgba(0,0,0,0.25)]&#xD;&#xA;                        hover:shadow-[0_6px_24px_rgba(0,0,0,0.3)]&#xD;&#xA;                        border border-white/10&#xD;&#xA;                        relative&#xD;&#xA;                        overflow-hidden&#xD;&#xA;                        mb-8 md:mb-0&#xD;&#xA;                    &#34;&#xD;&#xA;                    data-track-click=&#34;hero-cta&#34;&#xD;&#xA;                &gt;&#xD;&#xA;                    &lt;div class=&#34;absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 transform -skew-x-12&#34;&gt;&lt;/div&gt;&#xD;&#xA;                    &lt;span class=&#34;relative z-10&#34;&gt;Agendar Massagem&lt;/span&gt;&#xD;&#xA;                    &lt;svg class=&#34;&#xD;&#xA;                        ml-2 w-4 h-4&#xD;&#xA;                        relative z-10&#xD;&#xA;                        transition-transform&#xD;&#xA;                        duration-300&#xD;&#xA;                        group-hover:translate-x-1&#xD;&#xA;                    &#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; viewBox=&#34;0 0 24 24&#34;&gt;&#xD;&#xA;                        &lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;2&#34; d=&#34;M9 5l7 7-7 7&#34; /&gt;&#xD;&#xA;                    &lt;/svg&gt;&#xD;&#xA;                    &lt;div class=&#34;absolute inset-0 bg-gradient-to-b from-white/10 to-transparent opacity-50&#34;&gt;&lt;/div&gt;&#xD;&#xA;                &lt;/a&gt;&#xD;&#xA;            &lt;/div&gt;&#xD;&#xA;        &lt;/div&gt;&#xD;&#xA;    &lt;/div&gt;&#xD;&#xA;&lt;/section&gt;&#xD;&#xA;&#xD;&#xA;&lt;style&gt;&#xD;&#xA;@keyframes subtle-zoom {&#xD;&#xA;    0% { transform: scale(1.05); }&#xD;&#xA;    100% { transform: scale(1.12); }&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;@keyframes fade-in-up {&#xD;&#xA;    0% {&#xD;&#xA;        opacity: 0;&#xD;&#xA;        transform: translateY(20px);&#xD;&#xA;    }&#xD;&#xA;    100% {&#xD;&#xA;        opacity: 1;&#xD;&#xA;        transform: translateY(0);&#xD;&#xA;    }&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;.animate-subtle-zoom {&#xD;&#xA;    animation: subtle-zoom 20s ease-in-out infinite alternate;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;.animate-fade-in-up {&#xD;&#xA;    animation: fade-in-up 0.6s ease-out forwards;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;.animation-delay-200 {&#xD;&#xA;    animation-delay: 200ms;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;.animation-delay-400 {&#xD;&#xA;    animation-delay: 400ms;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;.animation-delay-600 {&#xD;&#xA;    animation-delay: 600ms;&#xD;&#xA;}&#xD;&#xA;&lt;/style&gt;&#xA; &#xD;&#xA;&#xD;&#xA;&lt;section class=&#34;benefits-section py-4 md:py-180 bg-gray-50&#34;&gt;&#xD;&#xA;  &lt;div class=&#34;container mx-auto px-4 sm:px-6 lg:px-8&#34;&gt;&#xD;&#xA;    &lt;div class=&#34;text-center max-w-3xl mx-auto mb-12&#34;&gt;&#xD;&#xA;      &lt;h2 class=&#34;text-3xl md:text-4xl font-bold font-display mb-4&#34;&gt;&#xD;&#xA;        Benefícios da Massagem&#xD;&#xA;      &lt;/h2&gt;&#xD;&#xA;      &#xD;&#xA;      &lt;p class=&#34;text-lg text-gray-600&#34;&gt;Descubra como a massagem de relaxamento pode melhorar sua qualidade de vida&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Política de Cookies</title>
+      <link>http://dev.tratamentes.pt/pt/politica-de-cookies/</link>
+      <pubDate>Sat, 23 Mar 2024 14:00:00 +0100</pubDate>
+      <guid>http://dev.tratamentes.pt/pt/politica-de-cookies/</guid>
+      <description>&lt;h1 id=&#34;política-de-cookies&#34;&gt;Política de Cookies&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;Última atualização:&lt;/strong&gt; 23 de novembro de 2024&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-o-que-são-cookies&#34;&gt;1. O que são Cookies?&lt;/h2&gt;&#xA;&lt;p&gt;Cookies são pequenos arquivos de texto que os websites colocam no seu dispositivo durante a navegação. Servem para fornecer várias funções essenciais, como memorizar as suas preferências, entender como usa o nosso website e melhorar sua experiência online.&lt;/p&gt;&#xA;&lt;h2 id=&#34;2-como-utilizamos-os-cookies&#34;&gt;2. Como Utilizamos os Cookies&lt;/h2&gt;&#xA;&lt;h3 id=&#34;21-cookies-essenciais&#34;&gt;2.1 Cookies Essenciais&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Finalidade&lt;/strong&gt;: Fundamentais para o funcionamento básico do website&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Duração&lt;/strong&gt;: Sessão/Persistente&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Exemplos&lt;/strong&gt;:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Cookies de sessão para manter você conectado&lt;/li&gt;&#xA;&lt;li&gt;Cookies de segurança para proteção contra fraudes&lt;/li&gt;&#xA;&lt;li&gt;Cookies de funcionalidade básica do site&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;22-cookies-de-desempenho&#34;&gt;2.2 Cookies de Desempenho&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Finalidade&lt;/strong&gt;: Análise de uso e desempenho do website&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Duração&lt;/strong&gt;: Persistente (até 2 anos)&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Exemplos&lt;/strong&gt;:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Google Analytics (análise de tráfego)&lt;/li&gt;&#xA;&lt;li&gt;Métricas de velocidade de carregamento&lt;/li&gt;&#xA;&lt;li&gt;Padrões de navegação&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;23-cookies-de-funcionalidade&#34;&gt;2.3 Cookies de Funcionalidade&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Finalidade&lt;/strong&gt;: Melhorar sua experiência de navegação&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Duração&lt;/strong&gt;: Persistente (até 1 ano)&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Exemplos&lt;/strong&gt;:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Preferências de idioma&lt;/li&gt;&#xA;&lt;li&gt;Configurações de acessibilidade&lt;/li&gt;&#xA;&lt;li&gt;Informações de formulários preenchidos&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;24-cookies-de-marketing&#34;&gt;2.4 Cookies de Marketing&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Finalidade&lt;/strong&gt;: Marketing e publicidade direcionada&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Duração&lt;/strong&gt;: Persistente (até 1 ano)&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Exemplos&lt;/strong&gt;:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Rastreamento de conversões&lt;/li&gt;&#xA;&lt;li&gt;Publicidade personalizada&lt;/li&gt;&#xA;&lt;li&gt;Redes sociais&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;3-gestão-de-cookies&#34;&gt;3. Gestão de Cookies&lt;/h2&gt;&#xA;&lt;h3 id=&#34;31-como-controlar-os-cookies&#34;&gt;3.1 Como Controlar os Cookies&lt;/h3&gt;&#xA;&lt;p&gt;Você pode controlar os cookies através de:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Política de Privacidade</title>
+      <link>http://dev.tratamentes.pt/pt/politica-de-privacidade/</link>
+      <pubDate>Sat, 23 Mar 2024 14:00:00 +0100</pubDate>
+      <guid>http://dev.tratamentes.pt/pt/politica-de-privacidade/</guid>
+      <description>&lt;h1 id=&#34;política-de-privacidade&#34;&gt;Política de Privacidade&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;Última atualização:&lt;/strong&gt; 23 de novembro de 2024&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-identificação-do-responsável-pelo-tratamento&#34;&gt;1. Identificação do Responsável pelo Tratamento&lt;/h2&gt;&#xA;&lt;p&gt;TrataMentes&lt;br&gt;&#xA;João Paulo Goulart&lt;br&gt;&#xA;NIF: PT188000666&lt;br&gt;&#xA;Morada: Rua Jorge Colaço, 32A, 1700-253 Lisboa&lt;br&gt;&#xA;Email: &lt;a href=&#34;mailto:joao.goulart@tratamentes.pt&#34;&gt;joao.goulart@tratamentes.pt&lt;/a&gt;&#xA;Telefone: +351 937 543 312&lt;/p&gt;&#xA;&lt;h2 id=&#34;2-compromisso-de-privacidade&#34;&gt;2. Compromisso de Privacidade&lt;/h2&gt;&#xA;&lt;p&gt;A TrataMentes está empenhada em proteger a privacidade e os dados pessoais dos seus clientes e utilizadores. Esta política de privacidade descreve como recolhemos, utilizamos, tratamos e protegemos os seus dados pessoais, em conformidade com o Regulamento Geral de Proteção de Dados (RGPD) e demais legislação aplicável.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Termos e Condições</title>
+      <link>http://dev.tratamentes.pt/pt/termos-e-condicoes/</link>
+      <pubDate>Sat, 23 Mar 2024 14:00:00 +0100</pubDate>
+      <guid>http://dev.tratamentes.pt/pt/termos-e-condicoes/</guid>
+      <description>&lt;h1 id=&#34;termos-e-condições&#34;&gt;Termos e Condições&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;Última atualização:&lt;/strong&gt; 23 de novembro de 2024&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-introdução&#34;&gt;1. Introdução&lt;/h2&gt;&#xA;&lt;p&gt;Estes Termos e Condições regulam a prestação de serviços de terapia manual e massagem pela TrataMentes, estabelecendo os direitos e obrigações entre o prestador de serviços e os clientes.&lt;/p&gt;&#xA;&lt;h2 id=&#34;2-serviços&#34;&gt;2. Serviços&lt;/h2&gt;&#xA;&lt;h3 id=&#34;21-descrição-dos-serviços&#34;&gt;2.1 Descrição dos Serviços&lt;/h3&gt;&#xA;&lt;p&gt;A TrataMentes oferece:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Massagem terapêutica&lt;/li&gt;&#xA;&lt;li&gt;Massagem de relaxamento&lt;/li&gt;&#xA;&lt;li&gt;Terapia manual&lt;/li&gt;&#xA;&lt;li&gt;Outros tratamentos terapêuticos relacionados&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;22-qualificações-profissionais&#34;&gt;2.2 Qualificações Profissionais&lt;/h3&gt;&#xA;&lt;p&gt;Todos os serviços são prestados por profissionais devidamente qualificados e certificados, em conformidade com a legislação portuguesa.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Sobre mim</title>
+      <link>http://dev.tratamentes.pt/pt/sobre/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://dev.tratamentes.pt/pt/sobre/</guid>
+      <description>&lt;p&gt;Seu conteúdo sobre você aqui&amp;hellip;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -42,6 +42,10 @@ publishDir = "dist"
   [[module.mounts]]
     source = "assets"
     target = "assets"
+
+  [[module.mounts]]
+    source = "assets/scss"
+    target = "assets/scss"
   
   [[module.mounts]]
     source = "i18n"
@@ -64,3 +68,17 @@ publishDir = "dist"
 
 [markup.goldmark.renderer]
   unsafe = true
+
+[build]
+  writeStats = true
+
+[build.processing]
+  [build.processing.css]
+    includePaths = ["themes/landing/assets/scss"]
+    method = "dart-sass"
+    options = { targetPath = "css/styles.css", outputStyle = "compressed", enableSourceMap = true }
+
+[[redirects]]
+  from = '/**'
+  status = 404
+  to = '/404.html'

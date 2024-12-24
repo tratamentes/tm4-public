@@ -1,0 +1,91 @@
+// abstracts/_typography.scss
+@use 'sass:map';
+
+// Font Families (exatamente como usado no original)
+$font-families: (
+  'primary': ('Inter', sans-serif),
+  'heading': ('Fraunces', serif),
+  'mono': ('Lucida Console', 'Courier New', monospace)
+);
+
+// Font Sizes (todos os tamanhos encontrados no original)
+$font-sizes: (
+  'xs': 0.75em,
+  'sm': 0.875em,
+  'base': 1em,
+  'lg': 1.75em,
+  'xl': 2.5em,
+  '2xl': 3.25em,
+  '3xl': 4em,
+  'root': 18pt      // Tamanho base do HTML
+);
+
+// Font Weights (exatamente como no original)
+$font-weights: (
+  'light': 300,
+  'regular': 400,
+  'bold': 'bolder',
+  'normal': 'normal'
+);
+
+// Line Heights (todos os valores encontrados)
+$line-heights: (
+  'none': 0,
+  'tight': 1,
+  'snug': 1.25,
+  'normal': 1.5,
+  'relaxed': 1.75,
+  'loose': 2,
+  'button': 2.5rem,
+  'button-lg': 3.5rem,
+  'form': calc(2.875rem - 2px)
+);
+
+// Letter Spacing (todos os valores encontrados)
+$letter-spacing: (
+  'tighter': -0.075rem,
+  'tight': -0.025rem,
+  'normal': 0,
+  'wide': 0.2rem,
+  'button': 0.2rem,
+  // Valores responsivos
+  'mobile': (
+    'tight': -0.065625rem,
+    'normal': -0.021875rem
+  )
+);
+
+// Mixins base
+@mixin font-family($family: 'primary') {
+  font-family: #{map.get($font-families, $family)};
+}
+
+@mixin font-size($size: 'base') {
+  font-size: map.get($font-sizes, $size);
+}
+
+@mixin font-weight($weight: 'regular') {
+  font-weight: map.get($font-weights, $weight);
+}
+
+@mixin line-height($height: 'normal') {
+  line-height: map.get($line-heights, $height);
+}
+
+@mixin letter-spacing($spacing: 'normal') {
+  letter-spacing: map.get($letter-spacing, $spacing);
+}
+
+// Mixin completo
+@mixin typography($size: 'base', $family: 'primary', $weight: 'regular', $height: 'normal', $spacing: 'normal') {
+  @include font-family($family);
+  @include font-size($size);
+  @include font-weight($weight);
+  @include line-height($height);
+  @include letter-spacing($spacing);
+}
+
+// Configuração root
+:root {
+  font-size: map.get($font-sizes, 'root');
+}

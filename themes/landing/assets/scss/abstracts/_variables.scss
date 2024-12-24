@@ -1,0 +1,12 @@
+$font-family-base: 'Inter', sans-serif;
+$font-family-heading: 'Fraunces', serif;
+
+$breakpoints: (
+  'small': 480px,
+  'medium': 768px,
+  'large': 1024px,
+  'xlarge': 1280px
+);
+
+$spacing-unit: 1rem;
+$container-max-width: 64rem;

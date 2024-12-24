@@ -1,0 +1,122 @@
+// abstracts/_grid.scss
+@use 'sass:map';
+// Breakpoints básicos e práticos (convertidos para rem para consistência)
+$breakpoints: (
+  'sm': 40rem,    // 640px
+  'md': 48rem,    // 768px
+  'lg': 64rem,    // 1024px
+  'xl': 80rem     // 1280px
+);
+
+// Container
+:root {
+  --container-padding: 1rem;
+  --container-max-width: 75rem;  // 1200px convertido para rem
+  --grid-gap: 1.5rem;
+}
+
+// Container base
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+  max-width: var(--container-max-width);
+
+  &-fluid {
+    max-width: none;
+  }
+}
+
+// Grid System
+.grid {
+  display: grid;
+  gap: var(--grid-gap);
+
+  // Grid básico de 1 coluna que se adapta aos breakpoints
+  &-auto-fit {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 18.75rem), 1fr));  // 300px convertido para rem
+  }
+
+  // Grid de 12 colunas responsivo
+  &-12 {
+    grid-template-columns: repeat(12, 1fr);
+
+    // Classes para colunas
+    @for $i from 1 through 12 {
+      .col-#{$i} {
+        grid-column: span $i;
+      }
+    }
+
+    // Responsividade
+    @each $breakpoint, $width in $breakpoints {
+      @media (max-width: $width) {
+        @for $i from 1 through 12 {
+          .col-#{$breakpoint}-#{$i} {
+            grid-column: span $i;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Flex layouts comuns
+.flex {
+  display: flex;
+  gap: var(--grid-gap);
+
+  &-wrap { flex-wrap: wrap; }
+  
+  // Direção
+  &-row { flex-direction: row; }
+  &-col { flex-direction: column; }
+  
+  // Alinhamento
+  &-center {
+    align-items: center;
+    justify-content: center;
+  }
+  
+  &-between { justify-content: space-between; }
+  &-around { justify-content: space-around; }
+  
+  // Responsividade
+  @media (max-width: map.get($breakpoints, 'md')) {
+    &-md-col { flex-direction: column; }
+  }
+}
+
+// Sistema de colunas simples usando flex
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--grid-gap);
+  
+  // Colunas automáticas com calc() mais seguro
+  &-2 > * { width: calc(50% - (var(--grid-gap) / 2)); }
+  &-3 > * { width: calc(33.333% - (var(--grid-gap) * 2 / 3)); }
+  &-4 > * { width: calc(25% - (var(--grid-gap) * 3 / 4)); }
+  
+  // Responsividade
+  @media (max-width: map.get($breakpoints, 'md')) {
+    &-2 > *, &-3 > *, &-4 > * {
+      width: 100%;
+    }
+  }
+}
+
+// Classes de utilitário para espaçamento
+.gap {
+  &-0 { gap: 0; }
+  &-sm { gap: 0.5rem; }
+  &-md { gap: 1rem; }
+  &-lg { gap: 2rem; }
+}
+
+// Helper function para converter px para rem (caso necessário)
+@function toRem($pixels) {
+  @return calc($pixels / 16) * 1rem;
+}
