@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Promotion &amp; Landing Page on TrataMentes - Manual Therapy &amp; Massage | João Goulart</title><link>http://localhost:1313/en/landing/</link><description>Recent content in Promotion &amp; Landing Page on TrataMentes - Manual Therapy &amp; Massage | João Goulart</description><generator>Hugo</generator><language>en</language><lastBuildDate>Tue, 19 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/en/landing/index.xml" rel="self" type="application/rss+xml"/><item><title>Relaxation Massage | Escape Daily Stress</title><link>http://localhost:1313/en/landing/relaxation-massage/</link><pubDate>Tue, 19 Nov 2024 00:00:00 +0000</pubDate><guid>http://localhost:1313/en/landing/relaxation-massage/</guid><description>&lt;section class="hero-section relative min-h-[55vh] md:min-h-[70vh] lg:min-h-[65vh] flex items-center overflow-hidden">
+ 
+ &lt;div class="absolute inset-0 z-0">
+ 
+ &lt;img 
+ src="http://localhost:1313/images/sportsMassage.jpg" 
+ alt="Massagem de Relaxamento"
+ class="w-full h-full object-cover scale-105 animate-subtle-zoom
+ 
+ brightness-150
+ 
+ "
+ 
+ >
+ &lt;div class="absolute inset-0 
+ 
+ bg-gradient-to-t from-black/80 via-black/60 to-black/30
+ 
+ ">&lt;/div>
+ 
+ &lt;/div>
+
+ 
+ &lt;div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-20 md:pt-24">
+ &lt;div class="max-w-2xl relative">
+ 
+ &lt;h1 class="
+ text-3xl md:text-4xl lg:text-5xl 
+ font-bold mb-4 font-display 
+ text-white 
+ drop-shadow-[0_2px_10px_rgba(0,0,0,0.3)]
+ animate-fade-in-up
+ leading-tight
+ ">
+ Relaxation Massage
+ &lt;/h1>
+ 
+
+ 
+ &lt;div class="relative mb-6 animate-fade-in-up animation-delay-200">
+ &lt;p class="
+ text-lg md:text-xl lg:text-2xl
+ text-white
+ relative z-10
+ drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]
+ leading-relaxed
+ ">
+ Enjoy 60 minutes of pure relaxation with our therapeutic massage. Relieve stress and regain your vital energy.
+ &lt;/p></description></item></channel></rss>

@@ -23,6 +23,6 @@
   </section>
   {{ end }} {{/* Formulário de Contacto */}} {{ if .Params.showContactForm }}
   <section class="contact-form">{{ partial "contact-form.html" . }}</section>
-  {{ end }} {{ partial "footer.html" . }}
+  {{ end }} {{ partialCached "footer.html" . }}
 </article>
 {{ end }}

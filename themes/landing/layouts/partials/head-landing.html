@@ -1,0 +1,49 @@
+<head>
+    {{/* Meta Tags */}}
+    {{ partial "head/_meta.html" . }}
+    
+    {{/* Fontes */}}
+    {{ partial "head/_fonts.html" . }}
+    
+    {{/* Estilos */}}
+    {{ partial "head/_styles.html" . }}
+    
+    {{/* CSS Landing */}}
+    {{ $landingStyles := resources.Get "css/landing/landing.css" }}
+    {{ if hugo.IsProduction }}
+        {{ $landingStyles = $landingStyles | minify | fingerprint }}
+    {{ end }}
+    <link rel="stylesheet" href="{{ $landingStyles.RelPermalink }}"
+        {{ if hugo.IsProduction }}integrity="{{ $landingStyles.Data.Integrity }}"{{ end }}
+        crossorigin="anonymous">
+    
+    {{/* Social Meta */}}
+    {{ partial "head/_social.html" . }}
+    
+    {{/* Favicon */}}
+    {{ partial "head/_favicon.html" . }}
+    
+    {{/* Alpine.js */}}
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+    {{/* Animações de entrada */}}
+    <script defer>
+        document.addEventListener('DOMContentLoaded', function() {
+            const observerOptions = {
+                root: null,
+                threshold: 0.1,
+                rootMargin: '0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+        });
+    </script>
+</head>

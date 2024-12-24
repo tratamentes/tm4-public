@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Promoção / Página de Vendas on TrataMentes - Terapia Manual &amp; Massagem | João Goulart</title><link>http://localhost:1313/pt/landing/</link><description>Recent content in Promoção / Página de Vendas on TrataMentes - Terapia Manual &amp; Massagem | João Goulart</description><generator>Hugo</generator><language>pt</language><lastBuildDate>Fri, 22 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/pt/landing/index.xml" rel="self" type="application/rss+xml"/><item><title>Massagem de Relaxamento | Escape do Stress Diário</title><link>http://localhost:1313/pt/landing/massagem-relaxamento/</link><pubDate>Tue, 19 Nov 2024 00:00:00 +0000</pubDate><guid>http://localhost:1313/pt/landing/massagem-relaxamento/</guid><description>&lt;section class="hero-section relative min-h-[55vh] md:min-h-[70vh] lg:min-h-[65vh] flex items-center overflow-hidden">
+ 
+ &lt;div class="absolute inset-0 z-0">
+ 
+ &lt;img 
+ src="http://localhost:1313/images/sportsMassage.jpg" 
+ alt="Massagem de Relaxamento"
+ class="w-full h-full object-cover scale-105 animate-subtle-zoom
+ 
+ brightness-150
+ 
+ "
+ 
+ >
+ &lt;div class="absolute inset-0 
+ 
+ bg-gradient-to-t from-black/80 via-black/60 to-black/30
+ 
+ ">&lt;/div>
+ 
+ &lt;/div>
+
+ 
+ &lt;div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-20 md:pt-24">
+ &lt;div class="max-w-2xl relative">
+ 
+ &lt;h1 class="
+ text-3xl md:text-4xl lg:text-5xl 
+ font-bold mb-4 font-display 
+ text-white 
+ drop-shadow-[0_2px_10px_rgba(0,0,0,0.3)]
+ animate-fade-in-up
+ leading-tight
+ ">
+ Massagem de Relaxamento
+ &lt;/h1>
+ 
+
+ 
+ &lt;div class="relative mb-6 animate-fade-in-up animation-delay-200">
+ &lt;p class="
+ text-lg md:text-xl lg:text-2xl
+ text-white
+ relative z-10
+ drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]
+ leading-relaxed
+ ">
+ 60 minutos dedicados exclusivamente ao seu bem-estar e relaxamento
+ &lt;/p>
+ &lt;/div>
+ 
+
+ &lt;div class="
+ flex flex-wrap items-center gap-3 md:gap-4 mb-8
+ animate-fade-in-up animation-delay-400
+ ">
+ 
+ &lt;div class="
+ flex items-center
+ px-3 py-2 md:px-4 md:py-2.5 rounded-xl
+ backdrop-blur-sm
+ bg-white/10
+ border border-white/20
+ text-white
+ shadow-[0_4px_12px_rgba(0,0,0,0.1)]
+ hover:bg-white/15 transition-all
+ ">
+ &lt;svg class="w-4 h-4 md:w-5 md:h-5 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+ &lt;circle cx="12" cy="12" r="10" stroke-width="2"/>
+ &lt;path stroke-linecap="round" stroke-width="2" d="M12 6v6l4 4"/>
+ &lt;/svg>
+ &lt;span class="text-sm md:text-base font-medium">60 minutos&lt;/span>
+ &lt;/div>
+ 
+
+ 
+ &lt;div class="
+ flex items-center
+ px-3 py-2 md:px-4 md:py-2.5 rounded-xl
+ backdrop-blur-sm
+ bg-white/10
+ border border-white/20
+ text-white
+ shadow-[0_4px_12px_rgba(0,0,0,0.1)]
+ hover:bg-white/15 transition-all
+ ">
+ &lt;svg class="w-4 h-4 md:w-5 md:h-5 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+ &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.121 15.536c-1.171 1.952-3.07 1.952-4.242 0m4.242 0c1.172-1.952 1.172-4.124 0-6.076M9.879 9.464c1.172-1.952 3.07-1.952 4.242 0M8 10.5h4m-4 3h4m9-1.5a9 9 0 11-18 0 9 9 0 0118 0z"/>
+ &lt;/svg>
+ &lt;span class="text-sm md:text-base font-medium">50€&lt;/span>
+ &lt;/div>
+ 
+ &lt;/div>
+
+ 
+ &lt;div class="animate-fade-in-up animation-delay-600">
+ &lt;a 
+ href="#contacto"
+ class="
+ group
+ inline-flex items-center
+ px-6 py-3 md:px-7 md:py-3.5
+ text-sm md:text-base font-medium
+ rounded-full
+ bg-gradient-to-r from-accent-400 to-accent-500
+ hover:from-accent-500 hover:to-accent-600
+ text-white
+ transition-all duration-300
+ transform hover:scale-[1.02]
+ shadow-[0_4px_20px_rgba(0,0,0,0.25)]
+ hover:shadow-[0_6px_24px_rgba(0,0,0,0.3)]
+ border border-white/10
+ relative
+ overflow-hidden
+ mb-8 md:mb-0
+ "
+ data-track-click="hero-cta"
+ >
+ &lt;div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 transform -skew-x-12">&lt;/div>
+ &lt;span class="relative z-10">Agendar Massagem&lt;/span>
+ &lt;svg class="
+ ml-2 w-4 h-4
+ relative z-10
+ transition-transform
+ duration-300
+ group-hover:translate-x-1
+ " fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+ &lt;/svg>
+ &lt;div class="absolute inset-0 bg-gradient-to-b from-white/10 to-transparent opacity-50">&lt;/div>
+ &lt;/a>
+ &lt;/div>
+ &lt;/div>
+ &lt;/div>
+&lt;/section>
+
+&lt;style>
+@keyframes subtle-zoom {
+ 0% { transform: scale(1.05); }
+ 100% { transform: scale(1.12); }
+}
+
+@keyframes fade-in-up {
+ 0% {
+ opacity: 0;
+ transform: translateY(20px);
+ }
+ 100% {
+ opacity: 1;
+ transform: translateY(0);
+ }
+}
+
+.animate-subtle-zoom {
+ animation: subtle-zoom 20s ease-in-out infinite alternate;
+}
+
+.animate-fade-in-up {
+ animation: fade-in-up 0.6s ease-out forwards;
+}
+
+.animation-delay-200 {
+ animation-delay: 200ms;
+}
+
+.animation-delay-400 {
+ animation-delay: 400ms;
+}
+
+.animation-delay-600 {
+ animation-delay: 600ms;
+}
+&lt;/style>
+ 
+
+&lt;section class="benefits-section py-4 md:py-180 bg-gray-50">
+ &lt;div class="container mx-auto px-4 sm:px-6 lg:px-8">
+ &lt;div class="text-center max-w-3xl mx-auto mb-12">
+ &lt;h2 class="text-3xl md:text-4xl font-bold font-display mb-4">
+ Benefícios da Massagem
+ &lt;/h2>
+ 
+ &lt;p class="text-lg text-gray-600">Descubra como a massagem de relaxamento pode melhorar sua qualidade de vida&lt;/p></description></item></channel></rss>

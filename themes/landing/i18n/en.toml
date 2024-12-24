@@ -44,7 +44,7 @@ other = "Privacy Policy"
 other = "Cookie Policy"
 
 [select_language]
-other = "Select Language"
+other = "🇬🇧"
 
 [lastModified]
 other = "Last updated: {{ .Count }}"
@@ -69,3 +69,6 @@ other = "This site uses cookies to improve your experience."
 
 [configure_cookies]
 other = "Configure cookies"
+
+[schedule]
+other = "Schedule"

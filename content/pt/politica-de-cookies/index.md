@@ -4,6 +4,7 @@ translationKey: 'cookie-policy'
 date: 2024-03-23T14:00:00+01:00
 lastmod: 2024-03-23T14:00:00+01:00
 draft: false
+description: "Compreender como utilizamos os cookies para melhorar a sua experiência de navegação e garantir o bom funcionamento do nosso sítio Web."
 type: 'privacy'
 layout: 'single'
 company:

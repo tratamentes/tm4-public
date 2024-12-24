@@ -1,143 +1,80 @@
-<!-- layouts/list.html -->
 <!doctype html>
 <html lang="{{ .Site.Language.Lang }}">
-  <head>
-    {{ partial "head.html" . }}
-  </head>
-  <body class="bg-gray-50 dark:bg-gray-900">
-    {{ partial "header.html" . }}
 
-    <main>
-      <!-- Hero Section -->
-      {{ with .Params.hero }} {{ if .enable }}
+<head>
+  {{ partial "head.html" . }}
+</head>
+
+<body class="bg-gray-50 dark:bg-gray-900">
+  {{ partial "header.html" . }}
+
+  <main>
+    <!-- Hero Section -->
+    {{ with .Params.hero }}
+    {{ if .enable }}
+    <section class="mb-16">
+      {{ $heroContext := dict "title" .title "description" .description "primaryButton" .primaryButton "secondaryButton"
+      .secondaryButton "featuredTreatment" .featuredTreatment }}
+      {{ $.Page.RenderString (printf `{{< section-hero %s>}}` (jsonify $heroContext)) }}
+    </section>
+    {{ end }}
+    {{ end }}
+
+    <div class="container mx-auto px-4 py-8">
+      <!-- Blog Listing with Pagination -->
       <section class="mb-16">
-        {{/* Usando o shortcode existente */}} {{ $heroContext := dict "title"
-        .title "description" .description "primaryButton" .primaryButton
-        "secondaryButton" .secondaryButton "featuredTreatment"
-        .featuredTreatment }} {{ $.Page.RenderString (printf `{{< section-hero
-        %s >}}` (jsonify $heroContext)) }}
-      </section>
-      {{ end }} {{ end }}
+        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-8">
+          {{ i18n "blog" }}
+        </h2>
 
-      <div class="container mx-auto px-4 py-8">
-        <!-- About Me Section -->
-        {{ with .Params.about }} {{ if .enable }}
-        <section
-          class="mb-16 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8"
-        >
-          <div class="flex flex-col md:flex-row items-center gap-8">
-            <div class="md:w-1/3">
-              {{ with .image }}
-              <img
-                src="{{ . }}"
-                alt="{{ $.Title }}"
-                class="rounded-full shadow-lg w-64 h-64 object-cover mx-auto"
-              />
-              {{ end }}
-            </div>
-            <div class="md:w-2/3">
-              <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-                {{ .title }}
-              </h2>
-              <div class="prose dark:prose-invert max-w-none">
-                {{ .content | markdownify }}
-              </div>
-              {{ with .certifications }}
-              <div class="mt-6 flex flex-wrap gap-2">
-                {{ range . }}
-                <span
-                  class="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-sm"
-                >
-                  {{ . }}
-                </span>
-                {{ end }}
-              </div>
-              {{ end }}
-            </div>
-          </div>
-        </section>
-        {{ end }} {{ end }}
+        <!-- Pagination Logic -->
+        {{ $paginator := .Paginate (where .Site.RegularPages "Type" "blog") }}
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {{ range $paginator.Pages }}
+          <article class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 transition-transform hover:scale-105">
+            <time class="text-sm text-gray-500 dark:text-gray-400">
+              {{ .Date.Format "2006-01-02" }}
+            </time>
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mt-2 mb-4">
+              {{ .Title }}
+            </h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">
+              {{ .Summary }}
+            </p>
+            <a href="{{ .Permalink }}" class="text-indigo-600 dark:text-indigo-400 hover:underline">
+              {{ i18n "readMore" }}
+            </a>
+          </article>
+          {{ end }}
+        </div>
 
-        <!-- Featured Treatments -->
-        {{ with .Params.treatments }} {{ if .enable }}
-        <section class="mb-16">
-          <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-8">
-            {{ .title }}
-          </h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {{ range first (.count | default 3) (where $.Site.RegularPages
-            "Type" "treatments") }}
-            <article
-              class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden transition-transform hover:scale-105"
-            >
-              <div class="aspect-w-16 aspect-h-9">
-                {{ with .Params.image }}
-                <img
-                  src="{{ . }}"
-                  alt="{{ $.Title }}"
-                  class="object-cover w-full h-full"
-                />
-                {{ end }}
-              </div>
-              <div class="p-6">
-                <h3
-                  class="text-xl font-semibold text-gray-900 dark:text-white mb-2"
-                >
-                  {{ .Title }}
-                </h3>
-                <p class="text-gray-600 dark:text-gray-300 mb-4">
-                  {{ .Summary }}
-                </p>
-                <a
-                  href="{{ .Permalink }}"
-                  class="inline-block px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors"
-                >
-                  {{ i18n "readMore" }}
-                </a>
-              </div>
-            </article>
-            {{ end }}
-          </div>
-        </section>
-        {{ end }} {{ end }}
+        <!-- Pagination Links -->
+        <div class="mt-8 flex justify-center">
+          {{ if $paginator.HasPrev }}
+          <a href="{{ $paginator.Prev.URL }}" class="px-4 py-2 bg-gray-300 text-gray-900 rounded hover:bg-gray-400">
+            {{ i18n "previous" }}
+          </a>
+          {{ end }}
 
-        <!-- Latest Blog Posts -->
-        {{ with .Params.blog }} {{ if .enable }}
-        <section class="mb-16">
-          <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-8">
-            {{ .title }}
-          </h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {{ range first (.count | default 4) (where $.Site.RegularPages
-            "Type" "blog") }}
-            <article
-              class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 transition-transform hover:scale-105"
-            >
-              <time class="text-sm text-gray-500 dark:text-gray-400">
-                {{ .Date.Format "2006-01-02" }}
-              </time>
-              <h3
-                class="text-xl font-semibold text-gray-900 dark:text-white mt-2 mb-4"
-              >
-                {{ .Title }}
-              </h3>
-              <p class="text-gray-600 dark:text-gray-300 mb-4">
-                {{ .Summary }}
-              </p>
-              <a
-                href="{{ .Permalink }}"
-                class="text-indigo-600 dark:text-indigo-400 hover:underline"
-              >
-                {{ i18n "readMore" }}
-              </a>
-            </article>
-            {{ end }}
-          </div>
-        </section>
-        {{ end }} {{ end }}
-      </div>
-    </main>
+          {{ range $pager := $paginator.Pagers }}
+          <a href="{{ $pager.URL }}"
+            class="px-4 py-2 mx-1 {{ if eq $pager $paginator }}bg-indigo-600 text-white{{ else }}bg-gray-300 text-gray-900 hover:bg-gray-400{{ end }} rounded">
+            {{ $pager.PageNumber }}
+          </a>
+          {{ end }}
 
-    {{ partial "footer.html" . }}
-  </body>
+          {{ if $paginator.HasNext }}
+          <a href="{{ $paginator.Next.URL }}" class="px-4 py-2 bg-gray-300 text-gray-900 rounded hover:bg-gray-400">
+            {{ i18n "next" }}
+          </a>
+          {{ end }}
+        </div>
+    </div>
+    </section>
+    </div>
+  </main>
+
+  {{ partialCached "footer.html" . }}
+</body>
+
 </html>

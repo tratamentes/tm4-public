@@ -1,9 +1,10 @@
 ---
 title: 'Termos e Condições'
-translationKey: 'terms-conditions'
+translationKey: 'terms-and-conditions'
 date: 2024-03-23T14:00:00+01:00
 lastmod: 2024-03-23T14:00:00+01:00
 draft: false
+description: "Leia os nossos termos e condições para compreender as diretrizes e políticas que regem a utilização dos nossos serviços e do nosso sítio Web."
 type: 'privacy'
 layout: 'single'
 company:

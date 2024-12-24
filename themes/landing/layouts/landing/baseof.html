@@ -4,10 +4,6 @@
     {{ partial "head.html" . }}
   </head>
   <body class="landing-page-body">
-    {{/* Skip to main content link */}}
-    <a href="#main" class="sr-only focus:not-sr-only">
-      {{ i18n "skip_to_main" }}
-    </a>
     {{/* Header */}} {{ partial "header.html" . }} {{/* Conteúdo principal */}}
     <main id="main">{{ block "main" . }}{{ end }}</main>
 
@@ -15,6 +11,7 @@
     "cookie-consent.html" . }}{{ end }} {{/* Scripts de analytics */}}{{ partial
     "analytics.html" . }} {{/* Incluir o main.js */}}{{ $mainscript :=
     resources.Get "js/main.js" | minify | fingerprint }}
+    {{ printf "%#v" $mainscript }}
     <script
       src="{{ $mainscript.RelPermalink }}"
       integrity="{{ $mainscript.Data.Integrity }}"

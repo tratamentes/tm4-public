@@ -1,0 +1,18 @@
+{{/* CSS crítico inline */}}
+{{ if site.Params.performance.critical.enable }}
+    {{ with resources.Get "css/critical.css" }}
+    <style>{{ .Content | safeCSS }}</style>
+    {{ end }}
+{{ end }}
+
+{{/* CSS Principal */}}
+{{ $mainStyles := resources.Get "css/live.css" }}
+{{ if $mainStyles }}
+    {{ $mainStyles = $mainStyles }}
+    {{ if hugo.IsProduction }}
+        {{ $mainStyles = $mainStyles | minify | fingerprint }}
+    {{ end }}
+    <link rel="stylesheet" href="{{ $mainStyles.RelPermalink }}"
+        {{ if hugo.IsProduction }}integrity="{{ $mainStyles.Data.Integrity }}"{{ end }} 
+        crossorigin="anonymous">
+{{ end }}

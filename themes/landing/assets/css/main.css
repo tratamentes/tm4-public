@@ -1,93 +1,14 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Base */
+@import './base/_variables.css';
+@import './base/_reset.css';
+@import './base/_typography.css';
 
-@layer base {
-  body {
-    @apply font-sans text-neutral-700 leading-relaxed;
-  }
+/* Components */
+@import './components/_buttons.css';
+@import './components/_navigation.css';
+@import './components/_cards.css';
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @apply font-display text-neutral-800 leading-tight;
-  }
-}
-
-@layer components {
-  .btn {
-    @apply inline-flex items-center px-4 py-2 rounded-md font-medium transition-all duration-200;
-  }
-
-  .btn-primary {
-    @apply bg-primary-300 text-white hover:bg-primary-400;
-  }
-
-  /* Cookie Consent */
-  .cookie-consent {
-    @apply fixed bottom-0 left-0 right-0 bg-white shadow-lg z-50 border-t border-neutral-200;
-  }
-
-  .cookie-consent-container {
-    @apply max-w-7xl mx-auto p-4 flex justify-between items-center flex-wrap gap-4;
-  }
-
-  .cookie-consent-buttons {
-    @apply flex gap-4;
-  }
-
-  .btn-cookie {
-    @apply px-4 py-2 rounded-md font-medium transition-all duration-200;
-  }
-
-  .btn-cookie-accept {
-    @apply bg-primary-300 text-white hover:bg-primary-400;
-  }
-
-  .btn-cookie-decline {
-    @apply border border-primary-300 text-primary-300 hover:bg-primary-300 hover:text-white;
-  }
-
-  /* Landing Page */
-  .hero {
-    @apply relative min-h-[80vh] flex items-center bg-center bg-cover;
-  }
-
-  .hero-content {
-    @apply relative z-10 text-white;
-  }
-
-  .hero-gradient {
-    @apply bg-gradient-to-r from-primary-300/80 to-primary-400/80;
-  }
-
-  .benefits-grid {
-    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4;
-  }
-
-  .pricing-card {
-    @apply border border-neutral-200 rounded-lg p-4 transition-transform hover:-translate-y-1;
-  }
-
-  /* Título especial com Fraunces */
-  .title-special {
-    @apply font-display italic text-primary-300;
-  }
-}
-
-@layer utilities {
-  .fade-in {
-    @apply opacity-0 translate-y-5 transition-all duration-500;
-  }
-
-  .fade-in.visible {
-    @apply opacity-100 translate-y-0;
-  }
-
-  .scrollbar-hide::-webkit-scrollbar {
-    display: none;
-  }
-}
+/* Layouts */
+@import './layouts/_header.css';
+@import './layouts/_footer.css';
+@import './layouts/_landing.css';

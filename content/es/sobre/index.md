@@ -1,11 +1,8 @@
 ---
-title: 'Sobre mim' # ou "Sobre Mim"
+title: 'Sobre mí' 
 translationKey: 'about'
 image: '/images/profile.jpg'
-certifications:
-  - 'Certificação 1'
-  - 'Certificação 2'
-  - 'Certificação 3'
+description: "Información sobre mí y mi trabajo"
 ---
 
-Seu conteúdo sobre você aqui...
+Tu contenido sobre ti aquí...

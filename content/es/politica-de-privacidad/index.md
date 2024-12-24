@@ -4,6 +4,7 @@ translationKey: 'privacy-policy'
 date: 2024-03-23T14:00:00+01:00
 lastmod: 2024-03-23T14:00:00+01:00
 draft: false
+description: "Conozca cómo recopilamos, utilizamos y protegemos su información personal de acuerdo con nuestro compromiso con la privacidad y la seguridad de los datos."
 type: 'privacy'
 layout: 'single'
 company:

@@ -4,6 +4,7 @@ translationKey: 'terms-and-conditions'
 date: 2024-03-23T14:00:00+01:00
 lastmod: 2024-03-23T14:00:00+01:00
 draft: false
+description: "Lea nuestros términos y condiciones para comprender las directrices y políticas que rigen el uso de nuestros servicios y sitio web."
 type: 'privacy'
 layout: 'single'
 company:

@@ -1,5 +1,9 @@
 ---
 title: 'Treatments & Services'
-description: 'Discover all therapy services'
+description: 'Know all therapy services'
 translationKey: 'treatments-index'
+url: '/en/services/'
+aliases: [
+    '/en/treatments/'
+]
 ---

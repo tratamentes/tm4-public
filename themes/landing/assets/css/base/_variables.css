@@ -1,0 +1,31 @@
+/* _variables.css */
+  :root {
+    /* Cores Completas */
+    --color-primary: #C4863D;
+    --color-primary-light: #F2B266;
+    --color-primary-dark: #8B5E2A;
+    --color-secondary: #623D2B;
+    --color-secondary-light: #8A5640;
+    
+    /* Tons Neutros */
+    --color-neutral-50: #F7F6F2;
+    --color-neutral-100: #E8E6E1;
+    --color-neutral-700: #3B3B3B;
+    --color-neutral-900: #1C1917;
+  
+    /* Tipografia */
+    --font-sans: 'Inter', system-ui, sans-serif;
+    --font-display: 'Fraunces', serif;
+    
+    /* Tamanhos de Fonte */
+    --text-xs: 0.75rem;
+    --text-sm: 0.875rem;
+    --text-base: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.25rem;
+    
+    /* Títulos */
+    --heading-1: clamp(3rem, 5vw, 6rem);
+    --heading-2: clamp(2.5rem, 4vw, 4rem);
+    --heading-3: clamp(2rem, 3vw, 3rem);
+  }

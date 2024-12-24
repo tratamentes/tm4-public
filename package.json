@@ -5,18 +5,15 @@
   "private": true,
   "scripts": {
     "dev": "hugo server --config config/_default/config.development.toml --environment development -D",
-    "dev:build": "hugo --config config/_default/config.development.toml --environment development && npx tailwindcss -i ./themes/landing/assets/css/style.css -o ./themes/landing/static/css/styles.css",
-    "prod": "hugo --config config/_default/config.toml --environment production --minify && npx tailwindcss -i ./themes/landing/assets/css/style.css -o ./themes/landing/static/css/styles.css --minify",
     "format": "npx prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css,html}\"",
     "clean": "npx rimraf public resources node_modules",
-    "prebuild": "npm run clean"
+    "prebuild": "npm run clean",
+    "prod": "hugo --config config/_default/config.toml --environment production --minify",
+    "dev:build": "hugo --config config/_default/config.development.toml --environment development"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.20",
-    "postcss": "^8.4.49",
     "prettier": "^3.2.5",
-    "rimraf": "^5.0.5",
-    "tailwindcss": "^3.4.17"
+    "rimraf": "^5.0.5"
   },
   "engines": {
     "node": ">=18.0.0",

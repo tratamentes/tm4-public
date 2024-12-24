@@ -2,9 +2,12 @@
 baseURL = "http://dev.tratamentes.pt"
 theme = "landing"
 defaultContentLanguage = "pt"
+defaultContentLanguageInSubdir = true
 enableMultilingual = true
 enableRobotsTXT = true
 enableGitInfo = true
+publishDir = "dist"
+
 
 # Adicionar configuração dos módulos e shortcodes
 [module]
@@ -15,22 +18,49 @@ enableGitInfo = true
     source = "themes/landing/layouts/shortcodes"
     target = "layouts/shortcodes"
 
+# Depois o conteúdo para cada idioma
+  [[module.mounts]]
+    source = "content/pt"
+    target = "content"
+    lang = "pt"
+  
+  [[module.mounts]]
+    source = "content/en"
+    target = "content"
+    lang = "en"
+  
+  [[module.mounts]]
+    source = "content/es"
+    target = "content"
+    lang = "es"
+
+  # Configurações adicionais necessárias
+  [[module.mounts]]
+    source = "static"
+    target = "static"
+  
+  [[module.mounts]]
+    source = "assets"
+    target = "assets"
+  
+  [[module.mounts]]
+    source = "i18n"
+    target = "i18n"
+  
+  [[module.mounts]]
+    source = "data"
+    target = "data"
+
+  [[module.mounts]]
+    source = "archetypes"
+    target = "archetypes"
+
+
 [frontmatter]
   lastmod = ["lastmod", ":git", "date", "publishDate"]
 
-[permalinks]
-  services = "/tratamentos/:slug/"
-
-[build]
-  writeStats = true
-  logFile = "hugo-build.log"
-
 [server]
   logFile = "hugo-server.log"
-
-[build.processing]
-  css = true
-  js = true
 
 [markup.goldmark.renderer]
   unsafe = true

@@ -1,40 +1,39 @@
-/* CSS Crítico - apenas estilos essenciais para o carregamento inicial */
+/* critical.css - Apenas estilos absolutamente necessários para o primeiro render */
 :root {
-  --color-primary: #F2B266;
-  --color-secondary: #C4863D;
-  --font-display: 'Fraunces', serif;
-  --font-body: 'Inter', sans-serif;
+  /* Cores Principais */
+  --color-primary: #C4863D;     /* Dourado Principal */
+  --color-primary-light: #F2B266; /* Dourado Claro */
+  --color-primary-dark: #8B5E2A;  /* Dourado Escuro */
+  
+  /* Tons Neutros Essenciais */
+  --color-neutral-50: #F7F6F2;   /* Fundo Claro */
+  --color-neutral-700: #3B3B3B;  /* Texto Principal */
 }
 
+/* Tipografia Crítica */
 body {
-  margin: 0;
-  font-family: var(--font-body);
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 16px;
   line-height: 1.5;
+  color: var(--color-neutral-700);
+  background-color: var(--color-neutral-50);
 }
 
-.hero {
+/* Layout Crítico */
+.container {
+  width: min(1400px, 100% - 2rem);
+  margin-inline: auto;
+}
+
+/* Header Crítico */
+.site-header {
   position: relative;
+  padding: 1rem 0;
+}
+
+/* Hero Crítico (se existir na primeira tela) */
+.hero {
   min-height: 80vh;
   display: flex;
   align-items: center;
-  color: white;
-}
-
-.container {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-/* Estilos críticos mínimos para evitar FOUC (Flash of Unstyled Content) */
-.hero-background {
-  position: absolute;
-  inset: 0;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 1;
 }

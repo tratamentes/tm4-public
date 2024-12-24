@@ -8,11 +8,6 @@
     {{ partial "head.html" . }}
   </head>
   <body class="antialiased bg-white">
-    {{/* Skip to main content link for accessibility */}}
-    <a href="#main" class="skip-to-main-content-link"
-      >{{ i18n "skip_to_main" }}</a
-    >
-
     {{/* Header */}} {{ partial "header.html" . }} {{/* Main content */}}
     <main id="main" class="min-h-screen">
       {{/* Alertas/Notificações globais se necessário */}} {{ partial
@@ -20,7 +15,7 @@
       }}
     </main>
 
-    {{/* Footer */}} {{ partial "footer.html" . }} {{/* Scripts */}} {{ partial
+    {{/* Footer */}} {{ partialCached "footer.html" . }} {{/* Scripts */}} {{ partial
     "analytics.html" . }} {{/* Cookie consent */}} {{ if
     site.Params.cookieConsent.enable }} {{ partial "cookie-consent.html" . }} {{
     end }}
